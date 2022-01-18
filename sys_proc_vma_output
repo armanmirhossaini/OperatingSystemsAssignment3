@@ -1,0 +1,5173 @@
+Initializing cgroup subsys cpuset
+Initializing cgroup subsys cpu
+Linux version 2.6.32 (root@amirhossHOST) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-23) (GCC) ) #12 SMP Fri Dec 3 20:48:19 EST 2021
+KERNEL supported cpus:
+  Intel GenuineIntel
+  AMD AuthenticAMD
+  NSC Geode by NSC
+  Cyrix CyrixInstead
+  Centaur CentaurHauls
+  Transmeta GenuineTMx86
+  Transmeta TransmetaCPU
+  UMC UMC UMC UMC
+BIOS-provided physical RAM map:
+ BIOS-e820: 0000000000000000 - 000000000009f400 (usable)
+ BIOS-e820: 000000000009f400 - 00000000000a0000 (reserved)
+ BIOS-e820: 00000000000dc000 - 0000000000100000 (reserved)
+ BIOS-e820: 0000000000100000 - 000000007fee0000 (usable)
+ BIOS-e820: 000000007fee0000 - 000000007feff000 (ACPI data)
+ BIOS-e820: 000000007feff000 - 000000007ff00000 (ACPI NVS)
+ BIOS-e820: 000000007ff00000 - 0000000080000000 (usable)
+ BIOS-e820: 00000000f0000000 - 00000000f8000000 (reserved)
+ BIOS-e820: 00000000fec00000 - 00000000fec10000 (reserved)
+ BIOS-e820: 00000000fee00000 - 00000000fee01000 (reserved)
+ BIOS-e820: 00000000fffe0000 - 0000000100000000 (reserved)
+DMI present.
+Phoenix BIOS detected: BIOS may corrupt low RAM, working around it.
+e820 update range: 0000000000000000 - 0000000000010000 (usable) ==> (reserved)
+last_pfn = 0x80000 max_arch_pfn = 0x1000000
+MTRR default type: uncachable
+MTRR fixed ranges enabled:
+  00000-9FFFF write-back
+  A0000-BFFFF uncachable
+  C0000-CFFFF write-protect
+  D0000-EFFFF uncachable
+  F0000-FFFFF write-protect
+MTRR variable ranges enabled:
+  0 base 00000000000 mask 7FF80000000 write-back
+  1 base 00080000000 mask 7FF80000000 uncachable
+  2 disabled
+  3 disabled
+  4 disabled
+  5 disabled
+  6 disabled
+  7 disabled
+x86 PAT enabled: cpu 0, old 0x7010600070106, new 0x7010600070106
+original variable MTRRs
+reg 0, base: 0GB, range: 2GB, type WB
+reg 1, base: 2GB, range: 2GB, type UC
+total RAM covered: 2048M
+Found optimal setting for mtrr clean up
+ gran_size: 64K 	chunk_size: 64K 	num_reg: 1  	lose cover RAM: 0G
+New variable MTRRs
+reg 0, base: 0GB, range: 2GB, type WB
+initial memory mapped : 0 - 01000000
+init_memory_mapping: 0000000000000000-00000000375fe000
+NX (Execute Disable) protection: active
+ 0000000000 - 0000200000 page 4k
+ 0000200000 - 0037400000 page 2M
+ 0037400000 - 00375fe000 page 4k
+kernel direct mapping tables up to 375fe000 @ 10000-18000
+RAMDISK: 3605d000 - 37fef7a0
+Allocated new RAMDISK: 00ba4000 - 02b367a0
+Move RAMDISK from 000000003605d000 - 0000000037fef79f to 00ba4000 - 02b3679f
+ACPI: RSDP 000f6a00 00024 (v02 PTLTD )
+ACPI: XSDT 7feee923 0005C (v01 INTEL  440BX    06040000 VMW  01324272)
+ACPI: FACP 7fefee73 000F4 (v04 INTEL  440BX    06040000 PTL  000F4240)
+ACPI: DSDT 7feeebbd 102B6 (v01 PTLTD  Custom   06040000 MSFT 03000001)
+ACPI: FACS 7fefffc0 00040
+ACPI: BOOT 7feeeb95 00028 (v01 PTLTD  $SBFTBL$ 06040000  LTP 00000001)
+ACPI: APIC 7feeeb1b 0007A (v01 PTLTD  ? APIC   06040000  LTP 00000000)
+ACPI: MCFG 7feeeadf 0003C (v01 PTLTD  $PCITBL$ 06040000  LTP 00000001)
+ACPI: SRAT 7feeea1f 000C0 (v02 VMWARE MEMPLUG  06040000 VMW  00000001)
+ACPI: HPET 7feee9e7 00038 (v01 VMWARE VMW HPET 06040000 VMW  00000001)
+ACPI: WAET 7feee9bf 00028 (v01 VMWARE VMW WAET 06040000 VMW  00000001)
+ACPI: Local APIC address 0xfee00000
+1162MB HIGHMEM available.
+885MB LOWMEM available.
+  mapped low ram: 0 - 375fe000
+  low ram: 0 - 375fe000
+  node 0 low ram: 00000000 - 375fe000
+  node 0 bootmap 00014000 - 0001aec0
+(9 early reservations) ==> bootmem [0000000000 - 00375fe000]
+  #0 [0000000000 - 0000001000]   BIOS data page ==> [0000000000 - 0000001000]
+  #1 [0000001000 - 0000002000]    EX TRAMPOLINE ==> [0000001000 - 0000002000]
+  #2 [0000006000 - 0000007000]       TRAMPOLINE ==> [0000006000 - 0000007000]
+  #3 [0000400000 - 0000b9aaa4]    TEXT DATA BSS ==> [0000400000 - 0000b9aaa4]
+  #4 [000009f400 - 0000100000]    BIOS reserved ==> [000009f400 - 0000100000]
+  #5 [0000b9b000 - 0000ba31c0]              BRK ==> [0000b9b000 - 0000ba31c0]
+  #6 [0000010000 - 0000014000]          PGTABLE ==> [0000010000 - 0000014000]
+  #7 [0000ba4000 - 0002b367a0]      NEW RAMDISK ==> [0000ba4000 - 0002b367a0]
+  #8 [0000014000 - 000001b000]          BOOTMAP ==> [0000014000 - 000001b000]
+found SMP MP-table at [c00f6a70] f6a70
+crashkernel: memory value expected
+Zone PFN ranges:
+  DMA      0x00000010 -> 0x00001000
+  Normal   0x00001000 -> 0x000375fe
+  HighMem  0x000375fe -> 0x00080000
+Movable zone start PFN for each node
+early_node_map[3] active PFN ranges
+    0: 0x00000010 -> 0x0000009f
+    0: 0x00000100 -> 0x0007fee0
+    0: 0x0007ff00 -> 0x00080000
+On node 0 totalpages: 524143
+  DMA zone: 32 pages used for memmap
+  DMA zone: 0 pages reserved
+  DMA zone: 3951 pages, LIFO batch:0
+  Normal zone: 1740 pages used for memmap
+  Normal zone: 220978 pages, LIFO batch:31
+  HighMem zone: 2325 pages used for memmap
+  HighMem zone: 295117 pages, LIFO batch:31
+Using APIC driver default
+ACPI: PM-Timer IO Port: 0x1008
+ACPI: Local APIC address 0xfee00000
+ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+ACPI: LAPIC (acpi_id[0x01] lapic_id[0x02] enabled)
+ACPI: LAPIC (acpi_id[0x02] lapic_id[0x04] enabled)
+ACPI: LAPIC (acpi_id[0x03] lapic_id[0x06] enabled)
+ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+IOAPIC[0]: apic_id 1, version 17, address 0xfec00000, GSI 0-23
+ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 high edge)
+ACPI: IRQ0 used by override.
+ACPI: IRQ2 used by override.
+ACPI: IRQ9 used by override.
+Enabling APIC mode:  Flat.  Using 1 I/O APICs
+Using ACPI (MADT) for SMP configuration information
+ACPI: HPET id: 0x8086af01 base: 0xfed00000
+SMP: Allowing 4 CPUs, 0 hotplug CPUs
+nr_irqs_gsi: 24
+PM: Registered nosave memory: 000000000009f000 - 00000000000a0000
+PM: Registered nosave memory: 00000000000a0000 - 00000000000dc000
+PM: Registered nosave memory: 00000000000dc000 - 0000000000100000
+Allocating PCI resources starting at 80000000 (gap: 80000000:70000000)
+Booting paravirtualized kernel on bare hardware
+NR_CPUS:32 nr_cpumask_bits:32 nr_cpu_ids:4 nr_node_ids:1
+PERCPU: Embedded 14 pages/cpu @c3c00000 s36568 r0 d20776 u524288
+pcpu-alloc: s36568 r0 d20776 u524288 alloc=1*2097152
+pcpu-alloc: [0] 0 1 2 3 
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520046
+Kernel command line: ro root=/dev/mapper/vg_amirhosshost-lv_root rd_NO_LUKS LANG=en_US.UTF-8 rd_LVM_LV=vg_amirhosshost/lv_root rd_NO_MD quiet SYSFONT=latarcyrheb-sun16 rhgb crashkernel=auto rd_NO_DM  KEYBOARDTYPE=pc KEYTABLE=us rd_LVM_LV=vg_amirhosshost/lv_swap
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Enabling fast FPU save and restore... done.
+Enabling unmasked SIMD FPU exception support... done.
+Initializing CPU#0
+Initializing HighMem for node 0 (000375fe:00080000)
+Memory: 2037576k/2097152k available (3888k kernel code, 57748k reserved, 2215k data, 468k init, 1189768k highmem)
+virtual kernel memory layout:
+    fixmap  : 0xffad5000 - 0xfffff000   (5288 kB)
+    pkmap   : 0xff600000 - 0xff800000   (2048 kB)
+    vmalloc : 0xf7dfe000 - 0xff5fe000   ( 120 MB)
+    lowmem  : 0xc0000000 - 0xf75fe000   ( 885 MB)
+      .init : 0xc09f7000 - 0xc0a6c000   ( 468 kB)
+      .data : 0xc07cc29a - 0xc09f6288   (2215 kB)
+      .text : 0xc0400000 - 0xc07cc29a   (3888 kB)
+Checking if this processor honours the WP bit even in supervisor mode...Ok.
+Hierarchical RCU implementation.
+NR_IRQS:2304 nr_irqs:440
+Extended CMOS year: 2000
+Console: colour VGA+ 80x25
+console [tty0] enabled
+allocated 10485760 bytes of page_cgroup
+please try 'cgroup_disable=memory' option if you don't want memory cgroups
+hpet clockevent registered
+HPET: 16 timers in total, 0 timers will be used for per-cpu timer
+TSC freq read from hypervisor : 2197.455 MHz
+Detected 2197.455 MHz processor.
+Calibrating delay loop (skipped), value calculated using timer frequency.. 4394.91 BogoMIPS (lpj=2197455)
+Security Framework initialized
+SELinux:  Initializing.
+SELinux:  Starting in permissive mode
+Mount-cache hash table entries: 512
+Initializing cgroup subsys ns
+Initializing cgroup subsys cpuacct
+Initializing cgroup subsys memory
+Initializing cgroup subsys devices
+Initializing cgroup subsys freezer
+Initializing cgroup subsys net_cls
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 30720K
+mce: CPU supports 8 MCE banks
+CPU 0 MCA banks SHD:0 SHD:1 SHD:2 SHD:3 SHD:4 SHD:5 SHD:6 SHD:7
+Performance Events: no PMU driver, software events only.
+Checking 'hlt' instruction... OK.
+ACPI: Core revision 20090903
+..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+CPU0: Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz stepping 01
+Booting processor 1 APIC 0x2 ip 0x6000
+Initializing CPU#1
+Calibrating delay using timer specific routine.. 4393.92 BogoMIPS (lpj=2196960)
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 30720K
+CPU 1 MCA banks SHD:0 SHD:1 SHD:2 SHD:3 SHD:4 SHD:5 SHD:6 SHD:7
+CPU1: Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz stepping 01
+Skipping synchronization checks as TSC is reliable.
+Booting processor 2 APIC 0x4 ip 0x6000
+Initializing CPU#2
+Calibrating delay using timer specific routine.. 4393.91 BogoMIPS (lpj=2196958)
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 30720K
+CPU 2 MCA banks SHD:0 SHD:1 SHD:2 SHD:3 SHD:4 SHD:5 SHD:6 SHD:7
+CPU2: Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz stepping 01
+Booting processor 3 APIC 0x6 ip 0x6000
+Initializing CPU#3
+Calibrating delay using timer specific routine.. 4393.91 BogoMIPS (lpj=2196955)
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 30720K
+CPU 3 MCA banks SHD:0 SHD:1 SHD:2 SHD:3 SHD:4 SHD:5 SHD:6 SHD:7
+CPU3: Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz stepping 01
+Brought up 4 CPUs
+Total of 4 processors activated (17576.65 BogoMIPS).
+CPU0 attaching sched-domain:
+ domain 0: span 0-3 level CPU
+  groups: 0 1 2 3
+CPU1 attaching sched-domain:
+ domain 0: span 0-3 level CPU
+  groups: 1 2 3 0
+CPU2 attaching sched-domain:
+ domain 0: span 0-3 level CPU
+  groups: 2 3 0 1
+CPU3 attaching sched-domain:
+ domain 0: span 0-3 level CPU
+  groups: 3 0 1 2
+devtmpfs: initialized
+regulator: core version 0.5
+NET: Registered protocol family 16
+ACPI: bus type pci registered
+PCI: MCFG configuration 0: base f0000000 segment 0 buses 0 - 127
+PCI: MCFG area at f0000000 reserved in E820
+PCI: Using MMCONFIG for extended config space
+PCI: Using configuration type 1 for base access
+bio: create slab <bio-0> at 0
+ACPI: EC: Look up EC in DSDT
+ACPI: BIOS _OSI(Linux) query ignored
+ACPI: Interpreter enabled
+ACPI: (supports S0 S1 S4 S5)
+ACPI: Using IOAPIC for interrupt routing
+ACPI: No dock devices found.
+ACPI: PCI Root Bridge [PCI0] (0000:00)
+pci 0000:00:07.1: reg 20 io port: [0x1060-0x106f]
+pci 0000:00:07.3: quirk: region 1000-103f claimed by PIIX4 ACPI
+pci 0000:00:07.3: quirk: region 1040-104f claimed by PIIX4 SMB
+pci 0000:00:07.7: reg 10 io port: [0x1080-0x10bf]
+pci 0000:00:07.7: reg 14 64bit mmio: [0xfebfe000-0xfebfffff]
+pci 0000:00:0f.0: reg 10 io port: [0x1070-0x107f]
+pci 0000:00:0f.0: reg 14 32bit mmio pref: [0xe8000000-0xefffffff]
+pci 0000:00:0f.0: reg 18 32bit mmio: [0xfe000000-0xfe7fffff]
+pci 0000:00:0f.0: reg 30 32bit mmio pref: [0x000000-0x007fff]
+pci 0000:00:10.0: reg 10 io port: [0x1400-0x14ff]
+pci 0000:00:10.0: reg 14 64bit mmio: [0xfeba0000-0xfebbffff]
+pci 0000:00:10.0: reg 1c 64bit mmio: [0xfebc0000-0xfebdffff]
+pci 0000:00:10.0: reg 30 32bit mmio pref: [0x000000-0x003fff]
+pci 0000:00:15.0: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.0: PME# disabled
+pci 0000:00:15.1: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.1: PME# disabled
+pci 0000:00:15.2: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.2: PME# disabled
+pci 0000:00:15.3: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.3: PME# disabled
+pci 0000:00:15.4: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.4: PME# disabled
+pci 0000:00:15.5: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.5: PME# disabled
+pci 0000:00:15.6: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.6: PME# disabled
+pci 0000:00:15.7: PME# supported from D0 D3hot D3cold
+pci 0000:00:15.7: PME# disabled
+pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.0: PME# disabled
+pci 0000:00:16.1: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.1: PME# disabled
+pci 0000:00:16.2: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.2: PME# disabled
+pci 0000:00:16.3: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.3: PME# disabled
+pci 0000:00:16.4: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.4: PME# disabled
+pci 0000:00:16.5: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.5: PME# disabled
+pci 0000:00:16.6: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.6: PME# disabled
+pci 0000:00:16.7: PME# supported from D0 D3hot D3cold
+pci 0000:00:16.7: PME# disabled
+pci 0000:00:17.0: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.0: PME# disabled
+pci 0000:00:17.1: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.1: PME# disabled
+pci 0000:00:17.2: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.2: PME# disabled
+pci 0000:00:17.3: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.3: PME# disabled
+pci 0000:00:17.4: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.4: PME# disabled
+pci 0000:00:17.5: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.5: PME# disabled
+pci 0000:00:17.6: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.6: PME# disabled
+pci 0000:00:17.7: PME# supported from D0 D3hot D3cold
+pci 0000:00:17.7: PME# disabled
+pci 0000:00:18.0: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.0: PME# disabled
+pci 0000:00:18.1: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.1: PME# disabled
+pci 0000:00:18.2: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.2: PME# disabled
+pci 0000:00:18.3: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.3: PME# disabled
+pci 0000:00:18.4: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.4: PME# disabled
+pci 0000:00:18.5: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.5: PME# disabled
+pci 0000:00:18.6: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.6: PME# disabled
+pci 0000:00:18.7: PME# supported from D0 D3hot D3cold
+pci 0000:00:18.7: PME# disabled
+pci 0000:02:01.0: reg 24 32bit mmio: [0xfd5ff000-0xfd5fffff]
+pci 0000:02:01.0: reg 30 32bit mmio pref: [0x000000-0x00ffff]
+pci 0000:02:01.0: PME# supported from D3hot
+pci 0000:02:01.0: PME# disabled
+pci 0000:00:11.0: transparent bridge
+pci 0000:00:11.0: bridge io port: [0x2000-0x3fff]
+pci 0000:00:11.0: bridge 32bit mmio: [0xfd500000-0xfdffffff]
+pci 0000:00:11.0: bridge 64bit mmio pref: [0xe7b00000-0xe7ffffff]
+pci 0000:03:00.0: reg 10 32bit mmio: [0xfd4fc000-0xfd4fcfff]
+pci 0000:03:00.0: reg 14 32bit mmio: [0xfd4fd000-0xfd4fdfff]
+pci 0000:03:00.0: reg 18 32bit mmio: [0xfd4fe000-0xfd4fffff]
+pci 0000:03:00.0: reg 1c io port: [0x4000-0x400f]
+pci 0000:03:00.0: reg 30 32bit mmio pref: [0x000000-0x00ffff]
+pci 0000:03:00.0: supports D1 D2
+pci 0000:03:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+pci 0000:03:00.0: PME# disabled
+pci 0000:03:00.0: disabling ASPM on pre-1.1 PCIe device.  You can enable it with 'pcie_aspm=force'
+pci 0000:00:15.0: bridge io port: [0x4000-0x4fff]
+pci 0000:00:15.0: bridge 32bit mmio: [0xfd400000-0xfd4fffff]
+pci 0000:00:15.1: bridge io port: [0x8000-0x8fff]
+pci 0000:00:15.1: bridge 32bit mmio: [0xfd000000-0xfd0fffff]
+pci 0000:00:15.1: bridge 64bit mmio pref: [0xe7700000-0xe77fffff]
+pci 0000:00:15.2: bridge io port: [0xc000-0xcfff]
+pci 0000:00:15.2: bridge 32bit mmio: [0xfcc00000-0xfccfffff]
+pci 0000:00:15.2: bridge 64bit mmio pref: [0xe7300000-0xe73fffff]
+pci 0000:00:15.3: bridge 32bit mmio: [0xfc800000-0xfc8fffff]
+pci 0000:00:15.3: bridge 64bit mmio pref: [0xe6f00000-0xe6ffffff]
+pci 0000:00:15.4: bridge 32bit mmio: [0xfc400000-0xfc4fffff]
+pci 0000:00:15.4: bridge 64bit mmio pref: [0xe6b00000-0xe6bfffff]
+pci 0000:00:15.5: bridge 32bit mmio: [0xfc000000-0xfc0fffff]
+pci 0000:00:15.5: bridge 64bit mmio pref: [0xe6700000-0xe67fffff]
+pci 0000:00:15.6: bridge 32bit mmio: [0xfbc00000-0xfbcfffff]
+pci 0000:00:15.6: bridge 64bit mmio pref: [0xe6300000-0xe63fffff]
+pci 0000:00:15.7: bridge 32bit mmio: [0xfb800000-0xfb8fffff]
+pci 0000:00:15.7: bridge 64bit mmio pref: [0xe5f00000-0xe5ffffff]
+pci 0000:00:16.0: bridge io port: [0x5000-0x5fff]
+pci 0000:00:16.0: bridge 32bit mmio: [0xfd300000-0xfd3fffff]
+pci 0000:00:16.0: bridge 64bit mmio pref: [0xe7a00000-0xe7afffff]
+pci 0000:00:16.1: bridge io port: [0x9000-0x9fff]
+pci 0000:00:16.1: bridge 32bit mmio: [0xfcf00000-0xfcffffff]
+pci 0000:00:16.1: bridge 64bit mmio pref: [0xe7600000-0xe76fffff]
+pci 0000:00:16.2: bridge io port: [0xd000-0xdfff]
+pci 0000:00:16.2: bridge 32bit mmio: [0xfcb00000-0xfcbfffff]
+pci 0000:00:16.2: bridge 64bit mmio pref: [0xe7200000-0xe72fffff]
+pci 0000:00:16.3: bridge 32bit mmio: [0xfc700000-0xfc7fffff]
+pci 0000:00:16.3: bridge 64bit mmio pref: [0xe6e00000-0xe6efffff]
+pci 0000:00:16.4: bridge 32bit mmio: [0xfc300000-0xfc3fffff]
+pci 0000:00:16.4: bridge 64bit mmio pref: [0xe6a00000-0xe6afffff]
+pci 0000:00:16.5: bridge 32bit mmio: [0xfbf00000-0xfbffffff]
+pci 0000:00:16.5: bridge 64bit mmio pref: [0xe6600000-0xe66fffff]
+pci 0000:00:16.6: bridge 32bit mmio: [0xfbb00000-0xfbbfffff]
+pci 0000:00:16.6: bridge 64bit mmio pref: [0xe6200000-0xe62fffff]
+pci 0000:00:16.7: bridge 32bit mmio: [0xfb700000-0xfb7fffff]
+pci 0000:00:16.7: bridge 64bit mmio pref: [0xe5e00000-0xe5efffff]
+pci 0000:00:17.0: bridge io port: [0x6000-0x6fff]
+pci 0000:00:17.0: bridge 32bit mmio: [0xfd200000-0xfd2fffff]
+pci 0000:00:17.0: bridge 64bit mmio pref: [0xe7900000-0xe79fffff]
+pci 0000:00:17.1: bridge io port: [0xa000-0xafff]
+pci 0000:00:17.1: bridge 32bit mmio: [0xfce00000-0xfcefffff]
+pci 0000:00:17.1: bridge 64bit mmio pref: [0xe7500000-0xe75fffff]
+pci 0000:00:17.2: bridge io port: [0xe000-0xefff]
+pci 0000:00:17.2: bridge 32bit mmio: [0xfca00000-0xfcafffff]
+pci 0000:00:17.2: bridge 64bit mmio pref: [0xe7100000-0xe71fffff]
+pci 0000:00:17.3: bridge 32bit mmio: [0xfc600000-0xfc6fffff]
+pci 0000:00:17.3: bridge 64bit mmio pref: [0xe6d00000-0xe6dfffff]
+pci 0000:00:17.4: bridge 32bit mmio: [0xfc200000-0xfc2fffff]
+pci 0000:00:17.4: bridge 64bit mmio pref: [0xe6900000-0xe69fffff]
+pci 0000:00:17.5: bridge 32bit mmio: [0xfbe00000-0xfbefffff]
+pci 0000:00:17.5: bridge 64bit mmio pref: [0xe6500000-0xe65fffff]
+pci 0000:00:17.6: bridge 32bit mmio: [0xfba00000-0xfbafffff]
+pci 0000:00:17.6: bridge 64bit mmio pref: [0xe6100000-0xe61fffff]
+pci 0000:00:17.7: bridge 32bit mmio: [0xfb600000-0xfb6fffff]
+pci 0000:00:17.7: bridge 64bit mmio pref: [0xe5d00000-0xe5dfffff]
+pci 0000:00:18.0: bridge io port: [0x7000-0x7fff]
+pci 0000:00:18.0: bridge 32bit mmio: [0xfd100000-0xfd1fffff]
+pci 0000:00:18.0: bridge 64bit mmio pref: [0xe7800000-0xe78fffff]
+pci 0000:00:18.1: bridge io port: [0xb000-0xbfff]
+pci 0000:00:18.1: bridge 32bit mmio: [0xfcd00000-0xfcdfffff]
+pci 0000:00:18.1: bridge 64bit mmio pref: [0xe7400000-0xe74fffff]
+pci 0000:00:18.2: bridge 32bit mmio: [0xfc900000-0xfc9fffff]
+pci 0000:00:18.2: bridge 64bit mmio pref: [0xe7000000-0xe70fffff]
+pci 0000:00:18.3: bridge 32bit mmio: [0xfc500000-0xfc5fffff]
+pci 0000:00:18.3: bridge 64bit mmio pref: [0xe6c00000-0xe6cfffff]
+pci 0000:00:18.4: bridge 32bit mmio: [0xfc100000-0xfc1fffff]
+pci 0000:00:18.4: bridge 64bit mmio pref: [0xe6800000-0xe68fffff]
+pci 0000:00:18.5: bridge 32bit mmio: [0xfbd00000-0xfbdfffff]
+pci 0000:00:18.5: bridge 64bit mmio pref: [0xe6400000-0xe64fffff]
+pci 0000:00:18.6: bridge 32bit mmio: [0xfb900000-0xfb9fffff]
+pci 0000:00:18.6: bridge 64bit mmio pref: [0xe6000000-0xe60fffff]
+pci 0000:00:18.7: bridge 32bit mmio: [0xfb500000-0xfb5fffff]
+pci 0000:00:18.7: bridge 64bit mmio pref: [0xe5c00000-0xe5cfffff]
+pci_bus 0000:00: on NUMA node 0
+ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 7 *9 10 11 14 15)
+ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 9 10 *11 14 15)
+ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 *7 9 10 11 14 15)
+ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 7 9 *10 11 14 15)
+vgaarb: device added: PCI:0000:00:0f.0,decodes=io+mem,owns=io+mem,locks=none
+vgaarb: loaded
+SCSI subsystem initialized
+libata version 3.00 loaded.
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Using ACPI for IRQ routing
+NetLabel: Initializing
+NetLabel:  domain hash size = 128
+NetLabel:  protocols = UNLABELED CIPSOv4
+NetLabel:  unlabeled traffic allowed by default
+hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+hpet0: 16 comparators, 64-bit 14.318180 MHz counter
+Switching to clocksource tsc
+pnp: PnP ACPI init
+ACPI: bus type pnp registered
+pnp: PnP ACPI: found 10 devices
+ACPI: ACPI bus type pnp unregistered
+system 00:01: ioport range 0x1000-0x103f has been reserved
+system 00:01: ioport range 0x1040-0x104f has been reserved
+system 00:01: ioport range 0xcf0-0xcf1 has been reserved
+system 00:08: iomem range 0xfed00000-0xfed003ff has been reserved
+system 00:09: ioport range 0xfce0-0xfcff has been reserved
+system 00:09: iomem range 0xf0000000-0xf7ffffff has been reserved
+system 00:09: iomem range 0xfe800000-0xfe9fffff has been reserved
+pci 0000:00:15.3: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:15.4: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:15.5: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:15.6: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:15.7: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:16.3: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:16.4: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:16.5: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:16.6: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:16.7: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:17.3: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:17.4: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:17.5: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:17.6: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:17.7: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:18.2: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:18.3: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:18.4: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:18.5: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:18.6: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:18.7: BAR 13: can't allocate I/O resource [0x10000-0xffff]
+pci 0000:00:01.0: PCI bridge, secondary bus 0000:01
+pci 0000:00:01.0:   IO window: disabled
+pci 0000:00:01.0:   MEM window: disabled
+pci 0000:00:01.0:   PREFETCH window: disabled
+pci 0000:00:11.0: PCI bridge, secondary bus 0000:02
+pci 0000:00:11.0:   IO window: 0x2000-0x3fff
+pci 0000:00:11.0:   MEM window: 0xfd500000-0xfdffffff
+pci 0000:00:11.0:   PREFETCH window: 0x000000e7b00000-0x000000e7ffffff
+pci 0000:00:15.0: PCI bridge, secondary bus 0000:03
+pci 0000:00:15.0:   IO window: 0x4000-0x4fff
+pci 0000:00:15.0:   MEM window: 0xfd400000-0xfd4fffff
+pci 0000:00:15.0:   PREFETCH window: 0x80000000-0x801fffff
+pci 0000:00:15.1: PCI bridge, secondary bus 0000:04
+pci 0000:00:15.1:   IO window: 0x8000-0x8fff
+pci 0000:00:15.1:   MEM window: 0xfd000000-0xfd0fffff
+pci 0000:00:15.1:   PREFETCH window: 0x000000e7700000-0x000000e77fffff
+pci 0000:00:15.2: PCI bridge, secondary bus 0000:05
+pci 0000:00:15.2:   IO window: 0xc000-0xcfff
+pci 0000:00:15.2:   MEM window: 0xfcc00000-0xfccfffff
+pci 0000:00:15.2:   PREFETCH window: 0x000000e7300000-0x000000e73fffff
+pci 0000:00:15.3: PCI bridge, secondary bus 0000:06
+pci 0000:00:15.3:   IO window: disabled
+pci 0000:00:15.3:   MEM window: 0xfc800000-0xfc8fffff
+pci 0000:00:15.3:   PREFETCH window: 0x000000e6f00000-0x000000e6ffffff
+pci 0000:00:15.4: PCI bridge, secondary bus 0000:07
+pci 0000:00:15.4:   IO window: disabled
+pci 0000:00:15.4:   MEM window: 0xfc400000-0xfc4fffff
+pci 0000:00:15.4:   PREFETCH window: 0x000000e6b00000-0x000000e6bfffff
+pci 0000:00:15.5: PCI bridge, secondary bus 0000:08
+pci 0000:00:15.5:   IO window: disabled
+pci 0000:00:15.5:   MEM window: 0xfc000000-0xfc0fffff
+pci 0000:00:15.5:   PREFETCH window: 0x000000e6700000-0x000000e67fffff
+pci 0000:00:15.6: PCI bridge, secondary bus 0000:09
+pci 0000:00:15.6:   IO window: disabled
+pci 0000:00:15.6:   MEM window: 0xfbc00000-0xfbcfffff
+pci 0000:00:15.6:   PREFETCH window: 0x000000e6300000-0x000000e63fffff
+pci 0000:00:15.7: PCI bridge, secondary bus 0000:0a
+pci 0000:00:15.7:   IO window: disabled
+pci 0000:00:15.7:   MEM window: 0xfb800000-0xfb8fffff
+pci 0000:00:15.7:   PREFETCH window: 0x000000e5f00000-0x000000e5ffffff
+pci 0000:00:16.0: PCI bridge, secondary bus 0000:0b
+pci 0000:00:16.0:   IO window: 0x5000-0x5fff
+pci 0000:00:16.0:   MEM window: 0xfd300000-0xfd3fffff
+pci 0000:00:16.0:   PREFETCH window: 0x000000e7a00000-0x000000e7afffff
+pci 0000:00:16.1: PCI bridge, secondary bus 0000:0c
+pci 0000:00:16.1:   IO window: 0x9000-0x9fff
+pci 0000:00:16.1:   MEM window: 0xfcf00000-0xfcffffff
+pci 0000:00:16.1:   PREFETCH window: 0x000000e7600000-0x000000e76fffff
+pci 0000:00:16.2: PCI bridge, secondary bus 0000:0d
+pci 0000:00:16.2:   IO window: 0xd000-0xdfff
+pci 0000:00:16.2:   MEM window: 0xfcb00000-0xfcbfffff
+pci 0000:00:16.2:   PREFETCH window: 0x000000e7200000-0x000000e72fffff
+pci 0000:00:16.3: PCI bridge, secondary bus 0000:0e
+pci 0000:00:16.3:   IO window: disabled
+pci 0000:00:16.3:   MEM window: 0xfc700000-0xfc7fffff
+pci 0000:00:16.3:   PREFETCH window: 0x000000e6e00000-0x000000e6efffff
+pci 0000:00:16.4: PCI bridge, secondary bus 0000:0f
+pci 0000:00:16.4:   IO window: disabled
+pci 0000:00:16.4:   MEM window: 0xfc300000-0xfc3fffff
+pci 0000:00:16.4:   PREFETCH window: 0x000000e6a00000-0x000000e6afffff
+pci 0000:00:16.5: PCI bridge, secondary bus 0000:10
+pci 0000:00:16.5:   IO window: disabled
+pci 0000:00:16.5:   MEM window: 0xfbf00000-0xfbffffff
+pci 0000:00:16.5:   PREFETCH window: 0x000000e6600000-0x000000e66fffff
+pci 0000:00:16.6: PCI bridge, secondary bus 0000:11
+pci 0000:00:16.6:   IO window: disabled
+pci 0000:00:16.6:   MEM window: 0xfbb00000-0xfbbfffff
+pci 0000:00:16.6:   PREFETCH window: 0x000000e6200000-0x000000e62fffff
+pci 0000:00:16.7: PCI bridge, secondary bus 0000:12
+pci 0000:00:16.7:   IO window: disabled
+pci 0000:00:16.7:   MEM window: 0xfb700000-0xfb7fffff
+pci 0000:00:16.7:   PREFETCH window: 0x000000e5e00000-0x000000e5efffff
+pci 0000:00:17.0: PCI bridge, secondary bus 0000:13
+pci 0000:00:17.0:   IO window: 0x6000-0x6fff
+pci 0000:00:17.0:   MEM window: 0xfd200000-0xfd2fffff
+pci 0000:00:17.0:   PREFETCH window: 0x000000e7900000-0x000000e79fffff
+pci 0000:00:17.1: PCI bridge, secondary bus 0000:14
+pci 0000:00:17.1:   IO window: 0xa000-0xafff
+pci 0000:00:17.1:   MEM window: 0xfce00000-0xfcefffff
+pci 0000:00:17.1:   PREFETCH window: 0x000000e7500000-0x000000e75fffff
+pci 0000:00:17.2: PCI bridge, secondary bus 0000:15
+pci 0000:00:17.2:   IO window: 0xe000-0xefff
+pci 0000:00:17.2:   MEM window: 0xfca00000-0xfcafffff
+pci 0000:00:17.2:   PREFETCH window: 0x000000e7100000-0x000000e71fffff
+pci 0000:00:17.3: PCI bridge, secondary bus 0000:16
+pci 0000:00:17.3:   IO window: disabled
+pci 0000:00:17.3:   MEM window: 0xfc600000-0xfc6fffff
+pci 0000:00:17.3:   PREFETCH window: 0x000000e6d00000-0x000000e6dfffff
+pci 0000:00:17.4: PCI bridge, secondary bus 0000:17
+pci 0000:00:17.4:   IO window: disabled
+pci 0000:00:17.4:   MEM window: 0xfc200000-0xfc2fffff
+pci 0000:00:17.4:   PREFETCH window: 0x000000e6900000-0x000000e69fffff
+pci 0000:00:17.5: PCI bridge, secondary bus 0000:18
+pci 0000:00:17.5:   IO window: disabled
+pci 0000:00:17.5:   MEM window: 0xfbe00000-0xfbefffff
+pci 0000:00:17.5:   PREFETCH window: 0x000000e6500000-0x000000e65fffff
+pci 0000:00:17.6: PCI bridge, secondary bus 0000:19
+pci 0000:00:17.6:   IO window: disabled
+pci 0000:00:17.6:   MEM window: 0xfba00000-0xfbafffff
+pci 0000:00:17.6:   PREFETCH window: 0x000000e6100000-0x000000e61fffff
+pci 0000:00:17.7: PCI bridge, secondary bus 0000:1a
+pci 0000:00:17.7:   IO window: disabled
+pci 0000:00:17.7:   MEM window: 0xfb600000-0xfb6fffff
+pci 0000:00:17.7:   PREFETCH window: 0x000000e5d00000-0x000000e5dfffff
+pci 0000:00:18.0: PCI bridge, secondary bus 0000:1b
+pci 0000:00:18.0:   IO window: 0x7000-0x7fff
+pci 0000:00:18.0:   MEM window: 0xfd100000-0xfd1fffff
+pci 0000:00:18.0:   PREFETCH window: 0x000000e7800000-0x000000e78fffff
+pci 0000:00:18.1: PCI bridge, secondary bus 0000:1c
+pci 0000:00:18.1:   IO window: 0xb000-0xbfff
+pci 0000:00:18.1:   MEM window: 0xfcd00000-0xfcdfffff
+pci 0000:00:18.1:   PREFETCH window: 0x000000e7400000-0x000000e74fffff
+pci 0000:00:18.2: PCI bridge, secondary bus 0000:1d
+pci 0000:00:18.2:   IO window: disabled
+pci 0000:00:18.2:   MEM window: 0xfc900000-0xfc9fffff
+pci 0000:00:18.2:   PREFETCH window: 0x000000e7000000-0x000000e70fffff
+pci 0000:00:18.3: PCI bridge, secondary bus 0000:1e
+pci 0000:00:18.3:   IO window: disabled
+pci 0000:00:18.3:   MEM window: 0xfc500000-0xfc5fffff
+pci 0000:00:18.3:   PREFETCH window: 0x000000e6c00000-0x000000e6cfffff
+pci 0000:00:18.4: PCI bridge, secondary bus 0000:1f
+pci 0000:00:18.4:   IO window: disabled
+pci 0000:00:18.4:   MEM window: 0xfc100000-0xfc1fffff
+pci 0000:00:18.4:   PREFETCH window: 0x000000e6800000-0x000000e68fffff
+pci 0000:00:18.5: PCI bridge, secondary bus 0000:20
+pci 0000:00:18.5:   IO window: disabled
+pci 0000:00:18.5:   MEM window: 0xfbd00000-0xfbdfffff
+pci 0000:00:18.5:   PREFETCH window: 0x000000e6400000-0x000000e64fffff
+pci 0000:00:18.6: PCI bridge, secondary bus 0000:21
+pci 0000:00:18.6:   IO window: disabled
+pci 0000:00:18.6:   MEM window: 0xfb900000-0xfb9fffff
+pci 0000:00:18.6:   PREFETCH window: 0x000000e6000000-0x000000e60fffff
+pci 0000:00:18.7: PCI bridge, secondary bus 0000:22
+pci 0000:00:18.7:   IO window: disabled
+pci 0000:00:18.7:   MEM window: 0xfb500000-0xfb5fffff
+pci 0000:00:18.7:   PREFETCH window: 0x000000e5c00000-0x000000e5cfffff
+pci 0000:00:01.0: setting latency timer to 64
+pci 0000:00:15.0: setting latency timer to 64
+pci 0000:00:15.1: setting latency timer to 64
+pci 0000:00:15.2: setting latency timer to 64
+pci 0000:00:15.3: setting latency timer to 64
+pci 0000:00:15.4: setting latency timer to 64
+pci 0000:00:15.5: setting latency timer to 64
+pci 0000:00:15.6: setting latency timer to 64
+pci 0000:00:15.7: setting latency timer to 64
+pci 0000:00:16.0: setting latency timer to 64
+pci 0000:00:16.1: setting latency timer to 64
+pci 0000:00:16.2: setting latency timer to 64
+pci 0000:00:16.3: setting latency timer to 64
+pci 0000:00:16.4: setting latency timer to 64
+pci 0000:00:16.5: setting latency timer to 64
+pci 0000:00:16.6: setting latency timer to 64
+pci 0000:00:16.7: setting latency timer to 64
+pci 0000:00:17.0: setting latency timer to 64
+pci 0000:00:17.1: setting latency timer to 64
+pci 0000:00:17.2: setting latency timer to 64
+pci 0000:00:17.3: setting latency timer to 64
+pci 0000:00:17.4: setting latency timer to 64
+pci 0000:00:17.5: setting latency timer to 64
+pci 0000:00:17.6: setting latency timer to 64
+pci 0000:00:17.7: setting latency timer to 64
+pci 0000:00:18.0: setting latency timer to 64
+pci 0000:00:18.1: setting latency timer to 64
+pci 0000:00:18.2: setting latency timer to 64
+pci 0000:00:18.3: setting latency timer to 64
+pci 0000:00:18.4: setting latency timer to 64
+pci 0000:00:18.5: setting latency timer to 64
+pci 0000:00:18.6: setting latency timer to 64
+pci 0000:00:18.7: setting latency timer to 64
+pci_bus 0000:00: resource 0 io:  [0x00-0xffff]
+pci_bus 0000:00: resource 1 mem: [0x000000-0xffffffffffffffff]
+pci_bus 0000:02: resource 0 io:  [0x2000-0x3fff]
+pci_bus 0000:02: resource 1 mem: [0xfd500000-0xfdffffff]
+pci_bus 0000:02: resource 2 pref mem [0xe7b00000-0xe7ffffff]
+pci_bus 0000:02: resource 3 io:  [0x00-0xffff]
+pci_bus 0000:02: resource 4 mem: [0x000000-0xffffffffffffffff]
+pci_bus 0000:03: resource 0 io:  [0x4000-0x4fff]
+pci_bus 0000:03: resource 1 mem: [0xfd400000-0xfd4fffff]
+pci_bus 0000:03: resource 2 pref mem [0x80000000-0x801fffff]
+pci_bus 0000:04: resource 0 io:  [0x8000-0x8fff]
+pci_bus 0000:04: resource 1 mem: [0xfd000000-0xfd0fffff]
+pci_bus 0000:04: resource 2 pref mem [0xe7700000-0xe77fffff]
+pci_bus 0000:05: resource 0 io:  [0xc000-0xcfff]
+pci_bus 0000:05: resource 1 mem: [0xfcc00000-0xfccfffff]
+pci_bus 0000:05: resource 2 pref mem [0xe7300000-0xe73fffff]
+pci_bus 0000:06: resource 1 mem: [0xfc800000-0xfc8fffff]
+pci_bus 0000:06: resource 2 pref mem [0xe6f00000-0xe6ffffff]
+pci_bus 0000:07: resource 1 mem: [0xfc400000-0xfc4fffff]
+pci_bus 0000:07: resource 2 pref mem [0xe6b00000-0xe6bfffff]
+pci_bus 0000:08: resource 1 mem: [0xfc000000-0xfc0fffff]
+pci_bus 0000:08: resource 2 pref mem [0xe6700000-0xe67fffff]
+pci_bus 0000:09: resource 1 mem: [0xfbc00000-0xfbcfffff]
+pci_bus 0000:09: resource 2 pref mem [0xe6300000-0xe63fffff]
+pci_bus 0000:0a: resource 1 mem: [0xfb800000-0xfb8fffff]
+pci_bus 0000:0a: resource 2 pref mem [0xe5f00000-0xe5ffffff]
+pci_bus 0000:0b: resource 0 io:  [0x5000-0x5fff]
+pci_bus 0000:0b: resource 1 mem: [0xfd300000-0xfd3fffff]
+pci_bus 0000:0b: resource 2 pref mem [0xe7a00000-0xe7afffff]
+pci_bus 0000:0c: resource 0 io:  [0x9000-0x9fff]
+pci_bus 0000:0c: resource 1 mem: [0xfcf00000-0xfcffffff]
+pci_bus 0000:0c: resource 2 pref mem [0xe7600000-0xe76fffff]
+pci_bus 0000:0d: resource 0 io:  [0xd000-0xdfff]
+pci_bus 0000:0d: resource 1 mem: [0xfcb00000-0xfcbfffff]
+pci_bus 0000:0d: resource 2 pref mem [0xe7200000-0xe72fffff]
+pci_bus 0000:0e: resource 1 mem: [0xfc700000-0xfc7fffff]
+pci_bus 0000:0e: resource 2 pref mem [0xe6e00000-0xe6efffff]
+pci_bus 0000:0f: resource 1 mem: [0xfc300000-0xfc3fffff]
+pci_bus 0000:0f: resource 2 pref mem [0xe6a00000-0xe6afffff]
+pci_bus 0000:10: resource 1 mem: [0xfbf00000-0xfbffffff]
+pci_bus 0000:10: resource 2 pref mem [0xe6600000-0xe66fffff]
+pci_bus 0000:11: resource 1 mem: [0xfbb00000-0xfbbfffff]
+pci_bus 0000:11: resource 2 pref mem [0xe6200000-0xe62fffff]
+pci_bus 0000:12: resource 1 mem: [0xfb700000-0xfb7fffff]
+pci_bus 0000:12: resource 2 pref mem [0xe5e00000-0xe5efffff]
+pci_bus 0000:13: resource 0 io:  [0x6000-0x6fff]
+pci_bus 0000:13: resource 1 mem: [0xfd200000-0xfd2fffff]
+pci_bus 0000:13: resource 2 pref mem [0xe7900000-0xe79fffff]
+pci_bus 0000:14: resource 0 io:  [0xa000-0xafff]
+pci_bus 0000:14: resource 1 mem: [0xfce00000-0xfcefffff]
+pci_bus 0000:14: resource 2 pref mem [0xe7500000-0xe75fffff]
+pci_bus 0000:15: resource 0 io:  [0xe000-0xefff]
+pci_bus 0000:15: resource 1 mem: [0xfca00000-0xfcafffff]
+pci_bus 0000:15: resource 2 pref mem [0xe7100000-0xe71fffff]
+pci_bus 0000:16: resource 1 mem: [0xfc600000-0xfc6fffff]
+pci_bus 0000:16: resource 2 pref mem [0xe6d00000-0xe6dfffff]
+pci_bus 0000:17: resource 1 mem: [0xfc200000-0xfc2fffff]
+pci_bus 0000:17: resource 2 pref mem [0xe6900000-0xe69fffff]
+pci_bus 0000:18: resource 1 mem: [0xfbe00000-0xfbefffff]
+pci_bus 0000:18: resource 2 pref mem [0xe6500000-0xe65fffff]
+pci_bus 0000:19: resource 1 mem: [0xfba00000-0xfbafffff]
+pci_bus 0000:19: resource 2 pref mem [0xe6100000-0xe61fffff]
+pci_bus 0000:1a: resource 1 mem: [0xfb600000-0xfb6fffff]
+pci_bus 0000:1a: resource 2 pref mem [0xe5d00000-0xe5dfffff]
+pci_bus 0000:1b: resource 0 io:  [0x7000-0x7fff]
+pci_bus 0000:1b: resource 1 mem: [0xfd100000-0xfd1fffff]
+pci_bus 0000:1b: resource 2 pref mem [0xe7800000-0xe78fffff]
+pci_bus 0000:1c: resource 0 io:  [0xb000-0xbfff]
+pci_bus 0000:1c: resource 1 mem: [0xfcd00000-0xfcdfffff]
+pci_bus 0000:1c: resource 2 pref mem [0xe7400000-0xe74fffff]
+pci_bus 0000:1d: resource 1 mem: [0xfc900000-0xfc9fffff]
+pci_bus 0000:1d: resource 2 pref mem [0xe7000000-0xe70fffff]
+pci_bus 0000:1e: resource 1 mem: [0xfc500000-0xfc5fffff]
+pci_bus 0000:1e: resource 2 pref mem [0xe6c00000-0xe6cfffff]
+pci_bus 0000:1f: resource 1 mem: [0xfc100000-0xfc1fffff]
+pci_bus 0000:1f: resource 2 pref mem [0xe6800000-0xe68fffff]
+pci_bus 0000:20: resource 1 mem: [0xfbd00000-0xfbdfffff]
+pci_bus 0000:20: resource 2 pref mem [0xe6400000-0xe64fffff]
+pci_bus 0000:21: resource 1 mem: [0xfb900000-0xfb9fffff]
+pci_bus 0000:21: resource 2 pref mem [0xe6000000-0xe60fffff]
+pci_bus 0000:22: resource 1 mem: [0xfb500000-0xfb5fffff]
+pci_bus 0000:22: resource 2 pref mem [0xe5c00000-0xe5cfffff]
+NET: Registered protocol family 2
+IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+NET: Registered protocol family 1
+pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+pci 0000:00:0f.0: Boot video device
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 32329k freed
+Simple Boot Flag at 0x36 set to 0x1
+apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+apm: disabled - APM is not SMP safe.
+audit: initializing netlink socket (disabled)
+type=2000 audit(1638582857.576:1): initialized
+highmem bounce pool size: 64 pages
+HugeTLB registered 2 MB page size, pre-allocated 0 pages
+VFS: Disk quotas dquot_6.5.2
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+msgmni has been set to 1721
+SELinux:  Registering netfilter hooks
+alg: No test for stdrng (krng)
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+io scheduler noop registered
+io scheduler anticipatory registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+  alloc irq_desc for 24 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.0: irq 24 for MSI/MSI-X
+pcieport 0000:00:15.0: setting latency timer to 64
+  alloc irq_desc for 25 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.1: irq 25 for MSI/MSI-X
+pcieport 0000:00:15.1: setting latency timer to 64
+  alloc irq_desc for 26 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.2: irq 26 for MSI/MSI-X
+pcieport 0000:00:15.2: setting latency timer to 64
+  alloc irq_desc for 27 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.3: irq 27 for MSI/MSI-X
+pcieport 0000:00:15.3: setting latency timer to 64
+  alloc irq_desc for 28 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.4: irq 28 for MSI/MSI-X
+pcieport 0000:00:15.4: setting latency timer to 64
+  alloc irq_desc for 29 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.5: irq 29 for MSI/MSI-X
+pcieport 0000:00:15.5: setting latency timer to 64
+  alloc irq_desc for 30 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.6: irq 30 for MSI/MSI-X
+pcieport 0000:00:15.6: setting latency timer to 64
+  alloc irq_desc for 31 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:15.7: irq 31 for MSI/MSI-X
+pcieport 0000:00:15.7: setting latency timer to 64
+  alloc irq_desc for 32 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.0: irq 32 for MSI/MSI-X
+pcieport 0000:00:16.0: setting latency timer to 64
+  alloc irq_desc for 33 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.1: irq 33 for MSI/MSI-X
+pcieport 0000:00:16.1: setting latency timer to 64
+  alloc irq_desc for 34 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.2: irq 34 for MSI/MSI-X
+pcieport 0000:00:16.2: setting latency timer to 64
+  alloc irq_desc for 35 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.3: irq 35 for MSI/MSI-X
+pcieport 0000:00:16.3: setting latency timer to 64
+  alloc irq_desc for 36 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.4: irq 36 for MSI/MSI-X
+pcieport 0000:00:16.4: setting latency timer to 64
+  alloc irq_desc for 37 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.5: irq 37 for MSI/MSI-X
+pcieport 0000:00:16.5: setting latency timer to 64
+  alloc irq_desc for 38 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.6: irq 38 for MSI/MSI-X
+pcieport 0000:00:16.6: setting latency timer to 64
+  alloc irq_desc for 39 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:16.7: irq 39 for MSI/MSI-X
+pcieport 0000:00:16.7: setting latency timer to 64
+  alloc irq_desc for 40 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.0: irq 40 for MSI/MSI-X
+pcieport 0000:00:17.0: setting latency timer to 64
+  alloc irq_desc for 41 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.1: irq 41 for MSI/MSI-X
+pcieport 0000:00:17.1: setting latency timer to 64
+  alloc irq_desc for 42 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.2: irq 42 for MSI/MSI-X
+pcieport 0000:00:17.2: setting latency timer to 64
+  alloc irq_desc for 43 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.3: irq 43 for MSI/MSI-X
+pcieport 0000:00:17.3: setting latency timer to 64
+  alloc irq_desc for 44 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.4: irq 44 for MSI/MSI-X
+pcieport 0000:00:17.4: setting latency timer to 64
+  alloc irq_desc for 45 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.5: irq 45 for MSI/MSI-X
+pcieport 0000:00:17.5: setting latency timer to 64
+  alloc irq_desc for 46 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.6: irq 46 for MSI/MSI-X
+pcieport 0000:00:17.6: setting latency timer to 64
+  alloc irq_desc for 47 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:17.7: irq 47 for MSI/MSI-X
+pcieport 0000:00:17.7: setting latency timer to 64
+  alloc irq_desc for 48 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.0: irq 48 for MSI/MSI-X
+pcieport 0000:00:18.0: setting latency timer to 64
+  alloc irq_desc for 49 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.1: irq 49 for MSI/MSI-X
+pcieport 0000:00:18.1: setting latency timer to 64
+  alloc irq_desc for 50 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.2: irq 50 for MSI/MSI-X
+pcieport 0000:00:18.2: setting latency timer to 64
+  alloc irq_desc for 51 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.3: irq 51 for MSI/MSI-X
+pcieport 0000:00:18.3: setting latency timer to 64
+  alloc irq_desc for 52 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.4: irq 52 for MSI/MSI-X
+pcieport 0000:00:18.4: setting latency timer to 64
+  alloc irq_desc for 53 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.5: irq 53 for MSI/MSI-X
+pcieport 0000:00:18.5: setting latency timer to 64
+  alloc irq_desc for 54 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.6: irq 54 for MSI/MSI-X
+pcieport 0000:00:18.6: setting latency timer to 64
+  alloc irq_desc for 55 on node -1
+  alloc kstat_irqs on node -1
+pcieport 0000:00:18.7: irq 55 for MSI/MSI-X
+pcieport 0000:00:18.7: setting latency timer to 64
+pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+pciehp 0000:00:15.0:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.0:pcie04: service driver pciehp loaded
+pciehp 0000:00:15.1:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.1:pcie04: service driver pciehp loaded
+pciehp 0000:00:15.2:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.2:pcie04: service driver pciehp loaded
+pciehp 0000:00:15.3:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.3:pcie04: service driver pciehp loaded
+pciehp 0000:00:15.4:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.4:pcie04: service driver pciehp loaded
+pciehp 0000:00:15.5:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.5:pcie04: service driver pciehp loaded
+pciehp 0000:00:15.6:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.6:pcie04: service driver pciehp loaded
+pciehp 0000:00:15.7:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:15.7:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.0:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.0:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.1:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.1:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.2:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.2:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.3:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.3:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.4:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.4:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.5:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.5:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.6:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.6:pcie04: service driver pciehp loaded
+pciehp 0000:00:16.7:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:16.7:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.0:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.0:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.1:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.1:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.2:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.2:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.3:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.3:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.4:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.4:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.5:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.5:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.6:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.6:pcie04: service driver pciehp loaded
+pciehp 0000:00:17.7:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:17.7:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.0:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.0:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.1:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.1:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.2:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.2:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.3:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.3:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.4:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.4:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.5:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.5:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.6:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.6:pcie04: service driver pciehp loaded
+pciehp 0000:00:18.7:pcie04: HPC vendor_id 15ad device_id 7a0 ss_vid 0 ss_did 0
+pciehp 0000:00:18.7:pcie04: service driver pciehp loaded
+pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+acpiphp: Slot [32] registered
+acpiphp: Slot [33] registered
+acpiphp: Slot [34] registered
+acpiphp: Slot [35] registered
+acpiphp: Slot [36] registered
+acpiphp: Slot [37] registered
+acpiphp: Slot [38] registered
+acpiphp: Slot [39] registered
+acpiphp: Slot [40] registered
+acpiphp: Slot [41] registered
+acpiphp: Slot [42] registered
+acpiphp: Slot [43] registered
+acpiphp: Slot [44] registered
+acpiphp: Slot [45] registered
+acpiphp: Slot [46] registered
+acpiphp: Slot [47] registered
+acpiphp: Slot [48] registered
+acpiphp: Slot [49] registered
+acpiphp: Slot [50] registered
+acpiphp: Slot [51] registered
+acpiphp: Slot [52] registered
+acpiphp: Slot [53] registered
+acpiphp: Slot [54] registered
+acpiphp: Slot [55] registered
+acpiphp: Slot [56] registered
+acpiphp: Slot [57] registered
+acpiphp: Slot [58] registered
+acpiphp: Slot [59] registered
+acpiphp: Slot [60] registered
+acpiphp: Slot [61] registered
+acpiphp: Slot [62] registered
+acpiphp: Slot [63] registered
+acpiphp_glue: Slot 160 already registered by another hotplug driver
+acpiphp_glue: Slot 192 already registered by another hotplug driver
+acpiphp_glue: Slot 224 already registered by another hotplug driver
+acpiphp_glue: Slot 256 already registered by another hotplug driver
+acpiphp_glue: Slot 161 already registered by another hotplug driver
+acpiphp_glue: Slot 162 already registered by another hotplug driver
+acpiphp_glue: Slot 163 already registered by another hotplug driver
+acpiphp_glue: Slot 164 already registered by another hotplug driver
+acpiphp_glue: Slot 165 already registered by another hotplug driver
+acpiphp_glue: Slot 166 already registered by another hotplug driver
+acpiphp_glue: Slot 167 already registered by another hotplug driver
+acpiphp_glue: Slot 193 already registered by another hotplug driver
+acpiphp_glue: Slot 194 already registered by another hotplug driver
+acpiphp_glue: Slot 195 already registered by another hotplug driver
+acpiphp_glue: Slot 196 already registered by another hotplug driver
+acpiphp_glue: Slot 197 already registered by another hotplug driver
+acpiphp_glue: Slot 198 already registered by another hotplug driver
+acpiphp_glue: Slot 199 already registered by another hotplug driver
+acpiphp_glue: Slot 225 already registered by another hotplug driver
+acpiphp_glue: Slot 226 already registered by another hotplug driver
+acpiphp_glue: Slot 227 already registered by another hotplug driver
+acpiphp_glue: Slot 228 already registered by another hotplug driver
+acpiphp_glue: Slot 229 already registered by another hotplug driver
+acpiphp_glue: Slot 230 already registered by another hotplug driver
+acpiphp_glue: Slot 231 already registered by another hotplug driver
+acpiphp_glue: Slot 257 already registered by another hotplug driver
+acpiphp_glue: Slot 258 already registered by another hotplug driver
+acpiphp_glue: Slot 259 already registered by another hotplug driver
+acpiphp_glue: Slot 260 already registered by another hotplug driver
+acpiphp_glue: Slot 261 already registered by another hotplug driver
+acpiphp_glue: Slot 262 already registered by another hotplug driver
+acpiphp_glue: Slot 263 already registered by another hotplug driver
+pci-stub: invalid id string ""
+ACPI: AC Adapter [ACAD] (on-line)
+input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+ACPI: Power Button [PWRF]
+processor LNXCPU:00: registered as cooling_device0
+processor LNXCPU:01: registered as cooling_device1
+processor LNXCPU:02: registered as cooling_device2
+processor LNXCPU:03: registered as cooling_device3
+isapnp: Scanning for PnP cards...
+isapnp: No Plug & Play device found
+Non-volatile memory driver v1.3
+Linux agpgart interface v0.103
+agpgart-intel 0000:00:00.0: Intel 440BX Chipset
+agpgart-intel 0000:00:00.0: AGP aperture is 256M @ 0x0
+Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+brd: module loaded
+loop: module loaded
+input: Macintosh mouse button emulation as /devices/virtual/input/input1
+Fixed MDIO Bus: probed
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+uhci_hcd: USB Universal Host Controller Interface driver
+PNP: PS/2 Controller [PNP0303:KBC,PNP0f13:MOUS] at 0x60,0x64 irq 1,12
+serio: i8042 KBD port at 0x60,0x64 irq 1
+serio: i8042 AUX port at 0x60,0x64 irq 12
+mice: PS/2 mouse device common for all mice
+Driver 'rtc_cmos' needs updating - please use bus_type methods
+rtc_cmos 00:04: rtc core: registered rtc_cmos as rtc0
+rtc0: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+cpuidle: using governor ladder
+cpuidle: using governor menu
+usbcore: registered new interface driver hiddev
+usbcore: registered new interface driver usbhid
+usbhid: v2.6:USB HID core driver
+TCP cubic registered
+NET: Registered protocol family 17
+Using IPI No-Shortcut mode
+registered taskstats version 1
+No TPM chip found, activating TPM-bypass!
+input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+psmouse serio1: ID: 10 00 64
+input: ImPS/2 Generic Wheel Mouse as /devices/platform/i8042/serio1/input/input3
+rtc_cmos 00:04: setting system clock to 2021-12-04 01:54:18 UTC (1638582858)
+Initalizing network drop monitor service
+Freeing unused kernel memory: 468k freed
+Write protecting the kernel text: 3892k
+Write protecting the kernel read-only data: 1688k
+dracut: dracut-004-256.el6
+dracut: rd_NO_LUKS: removing cryptoluks activation
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.15.0-ioctl (2009-04-01) initialised: dm-devel@redhat.com
+udev: starting version 147
+dracut: Starting plymouth daemon
+dracut: rd_NO_DM: removing DM RAID activation
+dracut: rd_NO_MD: removing MD RAID activation
+ata_piix 0000:00:07.1: version 2.13
+scsi0 : ata_piix
+scsi1 : ata_piix
+ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0x1060 irq 14
+ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0x1068 irq 15
+Fusion MPT base driver 3.04.12
+Copyright (c) 1999-2008 LSI Corporation
+Fusion MPT SPI Host driver 3.04.12
+  alloc irq_desc for 17 on node -1
+  alloc kstat_irqs on node -1
+mptspi 0000:00:10.0: PCI INT A -> GSI 17 (level, low) -> IRQ 17
+mptbase: ioc0: Initiating bringup
+ioc0: LSI53C1030 B0: Capabilities={Initiator}
+scsi2 : ioc0: LSI53C1030 B0, FwRev=01032920h, Ports=1, MaxQ=128, IRQ=17
+scsi 2:0:0:0: Direct-Access     VMware   Virtual disk     2.0  PQ: 0 ANSI: 6
+scsi target2:0:0: Beginning Domain Validation
+scsi target2:0:0: Domain Validation skipping write tests
+scsi target2:0:0: Ending Domain Validation
+scsi target2:0:0: FAST-80 WIDE SCSI 160.0 MB/s DT (12.5 ns, offset 127)
+sd 2:0:0:0: [sda] 41943040 512-byte logical blocks: (21.4 GB/20.0 GiB)
+sd 2:0:0:0: [sda] Write Protect is off
+sd 2:0:0:0: [sda] Mode Sense: 61 00 00 00
+sd 2:0:0:0: [sda] Cache data unavailable
+sd 2:0:0:0: [sda] Assuming drive cache: write through
+sd 2:0:0:0: [sda] Cache data unavailable
+sd 2:0:0:0: [sda] Assuming drive cache: write through
+ sda: sda1 sda2
+sd 2:0:0:0: [sda] Cache data unavailable
+sd 2:0:0:0: [sda] Assuming drive cache: write through
+sd 2:0:0:0: [sda] Attached SCSI disk
+ahci 0000:02:01.0: version 3.0
+  alloc irq_desc for 19 on node -1
+  alloc kstat_irqs on node -1
+ahci 0000:02:01.0: PCI INT A -> GSI 19 (level, low) -> IRQ 19
+  alloc irq_desc for 56 on node -1
+  alloc kstat_irqs on node -1
+ahci 0000:02:01.0: irq 56 for MSI/MSI-X
+ahci 0000:02:01.0: AHCI 0001.0300 32 slots 30 ports 6 Gbps 0x3fffffff impl SATA mode
+ahci 0000:02:01.0: flags: 64bit ncq clo only 
+scsi3 : ahci
+scsi4 : ahci
+scsi5 : ahci
+scsi6 : ahci
+scsi7 : ahci
+scsi8 : ahci
+scsi9 : ahci
+scsi10 : ahci
+scsi11 : ahci
+scsi12 : ahci
+scsi13 : ahci
+scsi14 : ahci
+scsi15 : ahci
+scsi16 : ahci
+scsi17 : ahci
+scsi18 : ahci
+scsi19 : ahci
+scsi20 : ahci
+scsi21 : ahci
+scsi22 : ahci
+scsi23 : ahci
+scsi24 : ahci
+scsi25 : ahci
+scsi26 : ahci
+scsi27 : ahci
+scsi28 : ahci
+scsi29 : ahci
+scsi30 : ahci
+scsi31 : ahci
+scsi32 : ahci
+ata3: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff100 irq 56
+ata4: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff180 irq 56
+ata5: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff200 irq 56
+ata6: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff280 irq 56
+ata7: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff300 irq 56
+ata8: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff380 irq 56
+ata9: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff400 irq 56
+ata10: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff480 irq 56
+ata11: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff500 irq 56
+ata12: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff580 irq 56
+ata13: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff600 irq 56
+ata14: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff680 irq 56
+ata15: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff700 irq 56
+ata16: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff780 irq 56
+ata17: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff800 irq 56
+ata18: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff880 irq 56
+ata19: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff900 irq 56
+ata20: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ff980 irq 56
+ata21: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffa00 irq 56
+ata22: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffa80 irq 56
+ata23: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffb00 irq 56
+ata24: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffb80 irq 56
+ata25: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffc00 irq 56
+ata26: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffc80 irq 56
+ata27: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffd00 irq 56
+ata28: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffd80 irq 56
+ata29: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffe00 irq 56
+ata30: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5ffe80 irq 56
+ata31: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5fff00 irq 56
+ata32: SATA max UDMA/133 abar m4096@0xfd5ff000 port 0xfd5fff80 irq 56
+ata4: SATA link down (SStatus 0 SControl 300)
+ata10: SATA link down (SStatus 0 SControl 300)
+ata6: SATA link down (SStatus 0 SControl 300)
+ata8: SATA link down (SStatus 0 SControl 300)
+ata3: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+ata5: SATA link down (SStatus 0 SControl 300)
+ata7: SATA link down (SStatus 0 SControl 300)
+ata3.00: ATAPI: VMware Virtual SATA CDRW Drive, 00000001, max UDMA/33
+ata3.00: configured for UDMA/33
+scsi 3:0:0:0: CD-ROM            NECVMWar VMware SATA CD00 1.00 PQ: 0 ANSI: 5
+ata19: SATA link down (SStatus 0 SControl 300)
+ata11: SATA link down (SStatus 0 SControl 300)
+ata15: SATA link down (SStatus 0 SControl 300)
+ata23: SATA link down (SStatus 0 SControl 300)
+ata22: SATA link down (SStatus 0 SControl 300)
+ata20: SATA link down (SStatus 0 SControl 300)
+ata17: SATA link down (SStatus 0 SControl 300)
+ata9: SATA link down (SStatus 0 SControl 300)
+ata13: SATA link down (SStatus 0 SControl 300)
+ata16: SATA link down (SStatus 0 SControl 300)
+ata14: SATA link down (SStatus 0 SControl 300)
+ata12: SATA link down (SStatus 0 SControl 300)
+ata18: SATA link down (SStatus 0 SControl 300)
+ata21: SATA link down (SStatus 0 SControl 300)
+ata28: SATA link down (SStatus 0 SControl 300)
+ata25: SATA link down (SStatus 0 SControl 300)
+ata27: SATA link down (SStatus 0 SControl 300)
+ata29: SATA link down (SStatus 0 SControl 300)
+ata32: SATA link down (SStatus 0 SControl 300)
+ata31: SATA link down (SStatus 0 SControl 300)
+ata24: SATA link down (SStatus 0 SControl 300)
+ata30: SATA link down (SStatus 0 SControl 300)
+ata26: SATA link down (SStatus 0 SControl 300)
+sr0: scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+Uniform CD-ROM driver Revision: 3.20
+sr 3:0:0:0: Attached scsi CD-ROM sr0
+dracut: Scanning devices sda2  for LVM logical volumes vg_amirhosshost/lv_root vg_amirhosshost/lv_swap 
+dracut: inactive '/dev/vg_amirhosshost/lv_root' [15.54 GiB] inherit
+dracut: inactive '/dev/vg_amirhosshost/lv_swap' [3.97 GiB] inherit
+EXT4-fs (dm-0): mounted filesystem with ordered data mode
+dracut: Mounted root filesystem /dev/mapper/vg_amirhosshost-lv_root
+dracut: Loading SELinux policy
+type=1404 audit(1638582859.979:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+SELinux: 8192 avtab hash slots, 225596 rules.
+SELinux: 8192 avtab hash slots, 225596 rules.
+SELinux:  9 users, 12 roles, 3576 types, 179 bools, 1 sens, 1024 cats
+SELinux:  81 classes, 225596 rules
+SELinux:  Completing initialization.
+SELinux:  Setting up existing superblocks.
+SELinux: initialized (dev dm-0, type ext4), uses xattr
+SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+SELinux: initialized (dev securityfs, type securityfs), uses genfs_contexts
+SELinux: initialized (dev selinuxfs, type selinuxfs), uses genfs_contexts
+SELinux: initialized (dev mqueue, type mqueue), uses transition SIDs
+SELinux: initialized (dev hugetlbfs, type hugetlbfs), uses transition SIDs
+SELinux: initialized (dev devpts, type devpts), uses transition SIDs
+SELinux: initialized (dev inotifyfs, type inotifyfs), uses genfs_contexts
+SELinux: initialized (dev anon_inodefs, type anon_inodefs), uses genfs_contexts
+SELinux: initialized (dev pipefs, type pipefs), uses task SIDs
+SELinux: initialized (dev debugfs, type debugfs), uses genfs_contexts
+SELinux: initialized (dev sockfs, type sockfs), uses task SIDs
+SELinux: initialized (dev devtmpfs, type devtmpfs), uses transition SIDs
+SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+SELinux: initialized (dev proc, type proc), uses genfs_contexts
+SELinux: initialized (dev bdev, type bdev), uses genfs_contexts
+SELinux: initialized (dev rootfs, type rootfs), uses genfs_contexts
+SELinux: initialized (dev sysfs, type sysfs), uses genfs_contexts
+type=1403 audit(1638582860.316:3): policy loaded auid=4294967295 ses=4294967295
+dracut: 
+dracut: Switching root
+SELinux: initialized (dev usbfs, type usbfs), uses genfs_contexts
+readahead: starting
+udev: starting version 147
+piix4_smbus 0000:00:07.3: Host SMBus controller not enabled!
+sd 2:0:0:0: Attached scsi generic sg0 type 0
+sr 3:0:0:0: Attached scsi generic sg1 type 5
+VMware vmxnet3 virtual NIC driver - version 1.0.5.0-k-NAPI
+  alloc irq_desc for 18 on node -1
+  alloc kstat_irqs on node -1
+vmxnet3 0000:03:00.0: PCI INT A -> GSI 18 (level, low) -> IRQ 18
+vmxnet3 0000:03:00.0: setting latency timer to 64
+features: sg csum vlan jf tso tsoIPv6 lro highDMA
+  alloc irq_desc for 57 on node -1
+  alloc kstat_irqs on node -1
+vmxnet3 0000:03:00.0: irq 57 for MSI/MSI-X
+microcode: CPU0 sig=0x6f1, pf=0x1, revision=0xb000038
+platform microcode: firmware: requesting intel-ucode/06-0f-01
+microcode: CPU1 sig=0x6f1, pf=0x1, revision=0xb000038
+platform microcode: firmware: requesting intel-ucode/06-0f-01
+microcode: CPU2 sig=0x6f1, pf=0x1, revision=0xb000038
+platform microcode: firmware: requesting intel-ucode/06-0f-01
+microcode: CPU3 sig=0x6f1, pf=0x1, revision=0xb000038
+platform microcode: firmware: requesting intel-ucode/06-0f-01
+Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+EXT4-fs (sda1): mounted filesystem with ordered data mode
+SELinux: initialized (dev sda1, type ext4), uses xattr
+Adding 4161528k swap on /dev/mapper/vg_amirhosshost-lv_swap.  Priority:-1 extents:1 across:4161528k 
+SELinux: initialized (dev binfmt_misc, type binfmt_misc), uses genfs_contexts
+NET: Registered protocol family 10
+lo: Disabled Privacy Extensions
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+eth0: intr type 3, mode 0, 1 vectors allocated
+eth0: NIC Link is Up 10000 Mbps
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+SELinux: initialized (dev rpc_pipefs, type rpc_pipefs), uses genfs_contexts
+SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+Process 2056(fprintd) has RLIMIT_CORE set to 0
+Aborting core
+eth0: no IPv6 routers present
+fuse init (API version 7.13)
+ISO 9660 Extensions: Microsoft Joliet Level 3
+BUG: unable to handle kernel NULL pointer dereference at 000001fc
+IP: [<c05bcd3b>] sys_proc_vma+0x2b/0x1a0
+*pdpt = 00000000332e5001 *pde = 0000000000000000 
+Oops: 0000 [#1] SMP 
+last sysfs file: /sys/devices/system/cpu/online
+Modules linked in: fuse autofs4 sunrpc ipt_REJECT nf_conntrack_ipv4 nf_defrag_ipv4 iptable_filter ip_tables ip6t_REJECT nf_conntrack_ipv6 xt_state nf_conntrack ip6table_filter ip6_tables ipv6 uinput microcode vmxnet3 sg i2c_piix4 i2c_core ext4 mbcache jbd2 sr_mod cdrom ahci sd_mod crc_t10dif mptspi mptscsih mptbase scsi_transport_spi pata_acpi ata_generic ata_piix dm_mirror dm_region_hash dm_log dm_mod [last unloaded: scsi_wait_scan]
+
+Pid: 2424, comm: test_syscall_pr Not tainted (2.6.32 #12) VMware Virtual Platform
+EIP: 0060:[<c05bcd3b>] EFLAGS: 00010246 CPU: 2
+EIP is at sys_proc_vma+0x2b/0x1a0
+EAX: 00000000 EBX: 000001b2 ECX: 00000000 EDX: c09a6140
+ESI: 080484a0 EDI: 08048390 EBP: f3312000 ESP: f3313f24
+ DS: 007b ES: 007b FS: 00d8 GS: 00e0 SS: 0068
+Process test_syscall_pr (pid: 2424, ti=f3312000 task=f4b8e560 task.ti=f3312000)
+Stack:
+ c04e5fe3 f32e00f0 0000014f 00000000 00000000 00000000 f335cde0 00000000
+<0> f5acc3c0 f33987ac 00000004 00000000 00000000 00000000 00000000 f335cde0
+<0> 00000001 f2fcaae0 00000004 f33987ac f3313fb4 43dd47c0 f3309800 c049f605
+Call Trace:
+ [<c04e5fe3>] ? handle_mm_fault+0x2b3/0xca0
+ [<c049f605>] ? audit_syscall_entry+0x205/0x230
+ [<c04094bb>] ? sysenter_do_call+0x12/0x28
+Code: 81 ec 8c 00 00 00 8b 84 24 90 00 00 00 89 5c 24 7c 89 b4 24 80 00 00 00 89 bc 24 84 00 00 00 89 ac 24 88 00 00 00 e8 35 c5 ea ff <8b> 80 fc 01 00 00 8b 58 30 8b 30 c7 04 24 f8 36 90 c0 89 5c 24 
+EIP: [<c05bcd3b>] sys_proc_vma+0x2b/0x1a0 SS:ESP 0068:f3313f24
+CR2: 00000000000001fc
+---[ end trace 6eb5c7e16ffc56cd ]---
+Bridge firewalling registered
+
+There are 230 virtual memory areas (VMAs).
+-----------------------------
+VMA #1:
+-> Start address: 0x8048000
+-> End address: 0x8064000
+-> Total size (End - Start): 114688
+-> Mapped file: /usr/bin/gnome-volume-control-applet
+-----------------------------
+VMA #2:
+-> Start address: 0x8064000
+-> End address: 0x8069000
+-> Total size (End - Start): 20480
+-> Mapped file: /usr/bin/gnome-volume-control-applet
+-----------------------------
+VMA #3:
+-> Start address: 0x9a1c000
+-> End address: 0x9b7e000
+-> Total size (End - Start): 1449984
+-----------------------------
+VMA #4:
+-> Start address: 0x43c62000
+-> End address: 0x43c81000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #5:
+-> Start address: 0x43c81000
+-> End address: 0x43c82000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #6:
+-> Start address: 0x43c82000
+-> End address: 0x43c83000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #7:
+-> Start address: 0x43c85000
+-> End address: 0x43e16000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #8:
+-> Start address: 0x43e16000
+-> End address: 0x43e18000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #9:
+-> Start address: 0x43e18000
+-> End address: 0x43e19000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #10:
+-> Start address: 0x43e19000
+-> End address: 0x43e1c000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #11:
+-> Start address: 0x43e1e000
+-> End address: 0x43e21000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #12:
+-> Start address: 0x43e21000
+-> End address: 0x43e22000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #13:
+-> Start address: 0x43e22000
+-> End address: 0x43e23000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #14:
+-> Start address: 0x43e25000
+-> End address: 0x43e3c000
+-> Total size (End - Start): 94208
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #15:
+-> Start address: 0x43e3c000
+-> End address: 0x43e3d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #16:
+-> Start address: 0x43e3d000
+-> End address: 0x43e3e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #17:
+-> Start address: 0x43e3e000
+-> End address: 0x43e40000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #18:
+-> Start address: 0x43e42000
+-> End address: 0x43e49000
+-> Total size (End - Start): 28672
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #19:
+-> Start address: 0x43e49000
+-> End address: 0x43e4a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #20:
+-> Start address: 0x43e4a000
+-> End address: 0x43e4b000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #21:
+-> Start address: 0x43e4d000
+-> End address: 0x43e75000
+-> Total size (End - Start): 163840
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #22:
+-> Start address: 0x43e75000
+-> End address: 0x43e76000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #23:
+-> Start address: 0x43e76000
+-> End address: 0x43e77000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #24:
+-> Start address: 0x43e79000
+-> End address: 0x43f61000
+-> Total size (End - Start): 950272
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #25:
+-> Start address: 0x43f61000
+-> End address: 0x43f62000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #26:
+-> Start address: 0x43f64000
+-> End address: 0x43f76000
+-> Total size (End - Start): 73728
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #27:
+-> Start address: 0x43f76000
+-> End address: 0x43f77000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #28:
+-> Start address: 0x43f77000
+-> End address: 0x43f78000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #29:
+-> Start address: 0x43f7a000
+-> End address: 0x43f97000
+-> Total size (End - Start): 118784
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #30:
+-> Start address: 0x43f97000
+-> End address: 0x43f98000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #31:
+-> Start address: 0x43f98000
+-> End address: 0x43f99000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #32:
+-> Start address: 0x43f9b000
+-> End address: 0x43fe0000
+-> Total size (End - Start): 282624
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #33:
+-> Start address: 0x43fe0000
+-> End address: 0x43fe1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #34:
+-> Start address: 0x43fe1000
+-> End address: 0x43fe2000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #35:
+-> Start address: 0x43fe4000
+-> End address: 0x43ff9000
+-> Total size (End - Start): 86016
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #36:
+-> Start address: 0x43ff9000
+-> End address: 0x43ffb000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #37:
+-> Start address: 0x43ffb000
+-> End address: 0x43ffc000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #38:
+-> Start address: 0x43ffc000
+-> End address: 0x43ffe000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #39:
+-> Start address: 0x44000000
+-> End address: 0x44043000
+-> Total size (End - Start): 274432
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #40:
+-> Start address: 0x44043000
+-> End address: 0x44044000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #41:
+-> Start address: 0x44046000
+-> End address: 0x44049000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libgmodule-2.0.so.0.2200.5
+-----------------------------
+VMA #42:
+-> Start address: 0x44049000
+-> End address: 0x4404a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgmodule-2.0.so.0.2200.5
+-----------------------------
+VMA #43:
+-> Start address: 0x4404c000
+-> End address: 0x440fb000
+-> Total size (End - Start): 716800
+-> Mapped file: /lib/libgio-2.0.so.0.2200.5
+-----------------------------
+VMA #44:
+-> Start address: 0x440fb000
+-> End address: 0x440fd000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libgio-2.0.so.0.2200.5
+-----------------------------
+VMA #45:
+-> Start address: 0x440ff000
+-> End address: 0x44103000
+-> Total size (End - Start): 16384
+-> Mapped file: /lib/libgthread-2.0.so.0.2200.5
+-----------------------------
+VMA #46:
+-> Start address: 0x44103000
+-> End address: 0x44104000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgthread-2.0.so.0.2200.5
+-----------------------------
+VMA #47:
+-> Start address: 0x44106000
+-> End address: 0x44123000
+-> Total size (End - Start): 118784
+-> Mapped file: /usr/lib/libxcb.so.1.1.0
+-----------------------------
+VMA #48:
+-> Start address: 0x44123000
+-> End address: 0x44124000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libxcb.so.1.1.0
+-----------------------------
+VMA #49:
+-> Start address: 0x44126000
+-> End address: 0x4425a000
+-> Total size (End - Start): 1261568
+-> Mapped file: /usr/lib/libX11.so.6.3.0
+-----------------------------
+VMA #50:
+-> Start address: 0x4425a000
+-> End address: 0x4425e000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libX11.so.6.3.0
+-----------------------------
+VMA #51:
+-> Start address: 0x44260000
+-> End address: 0x44262000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXau.so.6.0.0
+-----------------------------
+VMA #52:
+-> Start address: 0x44262000
+-> End address: 0x44263000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXau.so.6.0.0
+-----------------------------
+VMA #53:
+-> Start address: 0x44265000
+-> End address: 0x44275000
+-> Total size (End - Start): 65536
+-> Mapped file: /usr/lib/libXext.so.6.4.0
+-----------------------------
+VMA #54:
+-> Start address: 0x44275000
+-> End address: 0x44276000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXext.so.6.4.0
+-----------------------------
+VMA #55:
+-> Start address: 0x44278000
+-> End address: 0x44299000
+-> Total size (End - Start): 135168
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #56:
+-> Start address: 0x44299000
+-> End address: 0x4429a000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #57:
+-> Start address: 0x4429c000
+-> End address: 0x442c2000
+-> Total size (End - Start): 155648
+-> Mapped file: /lib/libexpat.so.1.5.2
+-----------------------------
+VMA #58:
+-> Start address: 0x442c2000
+-> End address: 0x442c4000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libexpat.so.1.5.2
+-----------------------------
+VMA #59:
+-> Start address: 0x442c6000
+-> End address: 0x442ed000
+-> Total size (End - Start): 159744
+-> Mapped file: /usr/lib/libpng12.so.0.46.0
+-----------------------------
+VMA #60:
+-> Start address: 0x442ed000
+-> End address: 0x442ee000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpng12.so.0.46.0
+-----------------------------
+VMA #61:
+-> Start address: 0x442f0000
+-> End address: 0x44384000
+-> Total size (End - Start): 606208
+-> Mapped file: /usr/lib/libfreetype.so.6.3.22
+-----------------------------
+VMA #62:
+-> Start address: 0x44384000
+-> End address: 0x44388000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libfreetype.so.6.3.22
+-----------------------------
+VMA #63:
+-> Start address: 0x4438a000
+-> End address: 0x44398000
+-> Total size (End - Start): 57344
+-> Mapped file: /usr/lib/libXi.so.6.1.0
+-----------------------------
+VMA #64:
+-> Start address: 0x44398000
+-> End address: 0x44399000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXi.so.6.1.0
+-----------------------------
+VMA #65:
+-> Start address: 0x4439b000
+-> End address: 0x443a3000
+-> Total size (End - Start): 32768
+-> Mapped file: /usr/lib/libXrender.so.1.3.0
+-----------------------------
+VMA #66:
+-> Start address: 0x443a3000
+-> End address: 0x443a4000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXrender.so.1.3.0
+-----------------------------
+VMA #67:
+-> Start address: 0x443a6000
+-> End address: 0x443d9000
+-> Total size (End - Start): 208896
+-> Mapped file: /usr/lib/libfontconfig.so.1.4.4
+-----------------------------
+VMA #68:
+-> Start address: 0x443d9000
+-> End address: 0x443db000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libfontconfig.so.1.4.4
+-----------------------------
+VMA #69:
+-> Start address: 0x443dd000
+-> End address: 0x44424000
+-> Total size (End - Start): 290816
+-> Mapped file: /usr/lib/libpango-1.0.so.0.2800.1
+-----------------------------
+VMA #70:
+-> Start address: 0x44424000
+-> End address: 0x44426000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libpango-1.0.so.0.2800.1
+-----------------------------
+VMA #71:
+-> Start address: 0x44428000
+-> End address: 0x4442a000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXdamage.so.1.1.0
+-----------------------------
+VMA #72:
+-> Start address: 0x4442a000
+-> End address: 0x4442b000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXdamage.so.1.1.0
+-----------------------------
+VMA #73:
+-> Start address: 0x4442d000
+-> End address: 0x4444b000
+-> Total size (End - Start): 122880
+-> Mapped file: /usr/lib/libgdk_pixbuf-2.0.so.0.1800.9
+-----------------------------
+VMA #74:
+-> Start address: 0x4444b000
+-> End address: 0x4444c000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libgdk_pixbuf-2.0.so.0.1800.9
+-----------------------------
+VMA #75:
+-> Start address: 0x4444e000
+-> End address: 0x44452000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libXfixes.so.3.1.0
+-----------------------------
+VMA #76:
+-> Start address: 0x44452000
+-> End address: 0x44453000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXfixes.so.3.1.0
+-----------------------------
+VMA #77:
+-> Start address: 0x44455000
+-> End address: 0x4445c000
+-> Total size (End - Start): 28672
+-> Mapped file: /usr/lib/libXrandr.so.2.2.0
+-----------------------------
+VMA #78:
+-> Start address: 0x4445c000
+-> End address: 0x4445d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXrandr.so.2.2.0
+-----------------------------
+VMA #79:
+-> Start address: 0x4445f000
+-> End address: 0x4446a000
+-> Total size (End - Start): 45056
+-> Mapped file: /usr/lib/libpangocairo-1.0.so.0.2800.1
+-----------------------------
+VMA #80:
+-> Start address: 0x4446a000
+-> End address: 0x4446b000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpangocairo-1.0.so.0.2800.1
+-----------------------------
+VMA #81:
+-> Start address: 0x4446d000
+-> End address: 0x4451f000
+-> Total size (End - Start): 729088
+-> Mapped file: /usr/lib/libgdk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #82:
+-> Start address: 0x4451f000
+-> End address: 0x44522000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libgdk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #83:
+-> Start address: 0x44524000
+-> End address: 0x4458a000
+-> Total size (End - Start): 417792
+-> Mapped file: /usr/lib/libpixman-1.so.0.18.4
+-----------------------------
+VMA #84:
+-> Start address: 0x4458a000
+-> End address: 0x4458d000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libpixman-1.so.0.18.4
+-----------------------------
+VMA #85:
+-> Start address: 0x4458f000
+-> End address: 0x44591000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXinerama.so.1.0.0
+-----------------------------
+VMA #86:
+-> Start address: 0x44591000
+-> End address: 0x44592000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXinerama.so.1.0.0
+-----------------------------
+VMA #87:
+-> Start address: 0x44594000
+-> End address: 0x44a1a000
+-> Total size (End - Start): 4743168
+-> Mapped file: /usr/lib/libgtk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #88:
+-> Start address: 0x44a1a000
+-> End address: 0x44a20000
+-> Total size (End - Start): 24576
+-> Mapped file: /usr/lib/libgtk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #89:
+-> Start address: 0x44a20000
+-> End address: 0x44a21000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #90:
+-> Start address: 0x44a23000
+-> End address: 0x44a25000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXcomposite.so.1.0.0
+-----------------------------
+VMA #91:
+-> Start address: 0x44a25000
+-> End address: 0x44a26000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXcomposite.so.1.0.0
+-----------------------------
+VMA #92:
+-> Start address: 0x44a28000
+-> End address: 0x44a31000
+-> Total size (End - Start): 36864
+-> Mapped file: /usr/lib/libXcursor.so.1.0.2
+-----------------------------
+VMA #93:
+-> Start address: 0x44a31000
+-> End address: 0x44a32000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXcursor.so.1.0.2
+-----------------------------
+VMA #94:
+-> Start address: 0x44a34000
+-> End address: 0x44a5d000
+-> Total size (End - Start): 167936
+-> Mapped file: /usr/lib/libpangoft2-1.0.so.0.2800.1
+-----------------------------
+VMA #95:
+-> Start address: 0x44a5d000
+-> End address: 0x44a5e000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpangoft2-1.0.so.0.2800.1
+-----------------------------
+VMA #96:
+-> Start address: 0x44a60000
+-> End address: 0x44ade000
+-> Total size (End - Start): 516096
+-> Mapped file: /usr/lib/libcairo.so.2.10800.8
+-----------------------------
+VMA #97:
+-> Start address: 0x44ade000
+-> End address: 0x44ae0000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libcairo.so.2.10800.8
+-----------------------------
+VMA #98:
+-> Start address: 0x44ae2000
+-> End address: 0x44aff000
+-> Total size (End - Start): 118784
+-> Mapped file: /usr/lib/libatk-1.0.so.0.2809.1
+-----------------------------
+VMA #99:
+-> Start address: 0x44aff000
+-> End address: 0x44b01000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libatk-1.0.so.0.2809.1
+-----------------------------
+VMA #100:
+-> Start address: 0x44b03000
+-> End address: 0x44c47000
+-> Total size (End - Start): 1327104
+-> Mapped file: /usr/lib/libxml2.so.2.7.6
+-----------------------------
+VMA #101:
+-> Start address: 0x44c47000
+-> End address: 0x44c4c000
+-> Total size (End - Start): 20480
+-> Mapped file: /usr/lib/libxml2.so.2.7.6
+-----------------------------
+VMA #102:
+-> Start address: 0x44c4c000
+-> End address: 0x44c4d000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #103:
+-> Start address: 0x44c4f000
+-> End address: 0x44ca2000
+-> Total size (End - Start): 339968
+-> Mapped file: /usr/lib/libORBit-2.so.0.1.0
+-----------------------------
+VMA #104:
+-> Start address: 0x44ca2000
+-> End address: 0x44cac000
+-> Total size (End - Start): 40960
+-> Mapped file: /usr/lib/libORBit-2.so.0.1.0
+-----------------------------
+VMA #105:
+-> Start address: 0x44cae000
+-> End address: 0x44ce5000
+-> Total size (End - Start): 225280
+-> Mapped file: /usr/lib/libgconf-2.so.4.1.5
+-----------------------------
+VMA #106:
+-> Start address: 0x44ce5000
+-> End address: 0x44ce8000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libgconf-2.so.4.1.5
+-----------------------------
+VMA #107:
+-> Start address: 0x44cea000
+-> End address: 0x44cee000
+-> Total size (End - Start): 16384
+-> Mapped file: /lib/libuuid.so.1.3.0
+-----------------------------
+VMA #108:
+-> Start address: 0x44cee000
+-> End address: 0x44cef000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libuuid.so.1.3.0
+-----------------------------
+VMA #109:
+-> Start address: 0x44cf1000
+-> End address: 0x44cf6000
+-> Total size (End - Start): 20480
+-> Mapped file: /usr/lib/libasyncns.so.0.3.1
+-----------------------------
+VMA #110:
+-> Start address: 0x44cf6000
+-> End address: 0x44cf7000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libasyncns.so.0.3.1
+-----------------------------
+VMA #111:
+-> Start address: 0x44cf9000
+-> End address: 0x44cfd000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libpulse-mainloop-glib.so.0.0.4
+-----------------------------
+VMA #112:
+-> Start address: 0x44cfd000
+-> End address: 0x44cfe000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpulse-mainloop-glib.so.0.0.4
+-----------------------------
+VMA #113:
+-> Start address: 0x44d1e000
+-> End address: 0x44d27000
+-> Total size (End - Start): 36864
+-> Mapped file: /usr/lib/libltdl.so.7.2.1
+-----------------------------
+VMA #114:
+-> Start address: 0x44d27000
+-> End address: 0x44d28000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libltdl.so.7.2.1
+-----------------------------
+VMA #115:
+-> Start address: 0x44d2a000
+-> End address: 0x44d2f000
+-> Total size (End - Start): 20480
+-> Mapped file: /usr/lib/libXtst.so.6.1.0
+-----------------------------
+VMA #116:
+-> Start address: 0x44d2f000
+-> End address: 0x44d30000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXtst.so.6.1.0
+-----------------------------
+VMA #117:
+-> Start address: 0x44d32000
+-> End address: 0x44d3a000
+-> Total size (End - Start): 32768
+-> Mapped file: /lib/libwrap.so.0.7.6
+-----------------------------
+VMA #118:
+-> Start address: 0x44d3a000
+-> End address: 0x44d3b000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libwrap.so.0.7.6
+-----------------------------
+VMA #119:
+-> Start address: 0x44d3b000
+-> End address: 0x44d3c000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libwrap.so.0.7.6
+-----------------------------
+VMA #120:
+-> Start address: 0x44d50000
+-> End address: 0x44d5b000
+-> Total size (End - Start): 45056
+-> Mapped file: /usr/lib/libunique-1.0.so.0.0.0
+-----------------------------
+VMA #121:
+-> Start address: 0x44d5b000
+-> End address: 0x44d5c000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libunique-1.0.so.0.0.0
+-----------------------------
+VMA #122:
+-> Start address: 0x44d5e000
+-> End address: 0x44d62000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libcanberra-gtk.so.0.1.5
+-----------------------------
+VMA #123:
+-> Start address: 0x44d62000
+-> End address: 0x44d63000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libcanberra-gtk.so.0.1.5
+-----------------------------
+VMA #124:
+-> Start address: 0x44d65000
+-> End address: 0x44d74000
+-> Total size (End - Start): 61440
+-> Mapped file: /usr/lib/libcanberra.so.0.2.1
+-----------------------------
+VMA #125:
+-> Start address: 0x44d74000
+-> End address: 0x44d75000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libcanberra.so.0.2.1
+-----------------------------
+VMA #126:
+-> Start address: 0x44d77000
+-> End address: 0x44e63000
+-> Total size (End - Start): 966656
+-> Mapped file: /usr/lib/libvorbisenc.so.2.0.6
+-----------------------------
+VMA #127:
+-> Start address: 0x44e63000
+-> End address: 0x44e71000
+-> Total size (End - Start): 57344
+-> Mapped file: /usr/lib/libvorbisenc.so.2.0.6
+-----------------------------
+VMA #128:
+-> Start address: 0x44eb4000
+-> End address: 0x44ecb000
+-> Total size (End - Start): 94208
+-> Mapped file: /usr/lib/libICE.so.6.3.0
+-----------------------------
+VMA #129:
+-> Start address: 0x44ecb000
+-> End address: 0x44ecd000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libICE.so.6.3.0
+-----------------------------
+VMA #130:
+-> Start address: 0x44ecd000
+-> End address: 0x44ece000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #131:
+-> Start address: 0x44ed0000
+-> End address: 0x44f37000
+-> Total size (End - Start): 421888
+-> Mapped file: /usr/lib/libsndfile.so.1.0.20
+-----------------------------
+VMA #132:
+-> Start address: 0x44f37000
+-> End address: 0x44f39000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libsndfile.so.1.0.20
+-----------------------------
+VMA #133:
+-> Start address: 0x44f39000
+-> End address: 0x44f3d000
+-> Total size (End - Start): 16384
+-----------------------------
+VMA #134:
+-> Start address: 0x44f3f000
+-> End address: 0x44f91000
+-> Total size (End - Start): 335872
+-> Mapped file: /usr/lib/libpulsecommon-0.9.21.so
+-----------------------------
+VMA #135:
+-> Start address: 0x44f91000
+-> End address: 0x44f92000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpulsecommon-0.9.21.so
+-----------------------------
+VMA #136:
+-> Start address: 0x44f94000
+-> End address: 0x44fda000
+-> Total size (End - Start): 286720
+-> Mapped file: /usr/lib/libpulse.so.0.12.2
+-----------------------------
+VMA #137:
+-> Start address: 0x44fda000
+-> End address: 0x44fdb000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpulse.so.0.12.2
+-----------------------------
+VMA #138:
+-> Start address: 0x4509d000
+-> End address: 0x450a4000
+-> Total size (End - Start): 28672
+-> Mapped file: /usr/lib/libSM.so.6.0.0
+-----------------------------
+VMA #139:
+-> Start address: 0x450a4000
+-> End address: 0x450a5000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libSM.so.6.0.0
+-----------------------------
+VMA #140:
+-> Start address: 0x450af000
+-> End address: 0x450be000
+-> Total size (End - Start): 61440
+-> Mapped file: /lib/libudev.so.0.5.1
+-----------------------------
+VMA #141:
+-> Start address: 0x450be000
+-> End address: 0x450bf000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libudev.so.0.5.1
+-----------------------------
+VMA #142:
+-> Start address: 0x450bf000
+-> End address: 0x450c0000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #143:
+-> Start address: 0x451d7000
+-> End address: 0x451d9000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #144:
+-> Start address: 0x451d9000
+-> End address: 0x451da000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #145:
+-> Start address: 0x451da000
+-> End address: 0x451db000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #146:
+-> Start address: 0x45455000
+-> End address: 0x4546c000
+-> Total size (End - Start): 94208
+-> Mapped file: /lib/libnsl-2.12.so
+-----------------------------
+VMA #147:
+-> Start address: 0x4546c000
+-> End address: 0x4546d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnsl-2.12.so
+-----------------------------
+VMA #148:
+-> Start address: 0x4546d000
+-> End address: 0x4546e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnsl-2.12.so
+-----------------------------
+VMA #149:
+-> Start address: 0x4546e000
+-> End address: 0x45470000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #150:
+-> Start address: 0x45472000
+-> End address: 0x454ae000
+-> Total size (End - Start): 245760
+-> Mapped file: /usr/lib/libFLAC.so.8.2.0
+-----------------------------
+VMA #151:
+-> Start address: 0x454ae000
+-> End address: 0x454af000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libFLAC.so.8.2.0
+-----------------------------
+VMA #152:
+-> Start address: 0x45512000
+-> End address: 0x4553c000
+-> Total size (End - Start): 172032
+-> Mapped file: /usr/lib/libvorbis.so.0.4.3
+-----------------------------
+VMA #153:
+-> Start address: 0x4553c000
+-> End address: 0x4553d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libvorbis.so.0.4.3
+-----------------------------
+VMA #154:
+-> Start address: 0x45557000
+-> End address: 0x4555c000
+-> Total size (End - Start): 20480
+-> Mapped file: /usr/lib/libogg.so.0.6.0
+-----------------------------
+VMA #155:
+-> Start address: 0x4555c000
+-> End address: 0x4555d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libogg.so.0.6.0
+-----------------------------
+VMA #156:
+-> Start address: 0x45741000
+-> End address: 0x45751000
+-> Total size (End - Start): 65536
+-> Mapped file: /lib/libbz2.so.1.0.4
+-----------------------------
+VMA #157:
+-> Start address: 0x45751000
+-> End address: 0x45752000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libbz2.so.1.0.4
+-----------------------------
+VMA #158:
+-> Start address: 0x45833000
+-> End address: 0x45842000
+-> Total size (End - Start): 61440
+-> Mapped file: /usr/lib/libtdb.so.1.2.1
+-----------------------------
+VMA #159:
+-> Start address: 0x45842000
+-> End address: 0x45843000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libtdb.so.1.2.1
+-----------------------------
+VMA #160:
+-> Start address: 0x458f4000
+-> End address: 0x458fc000
+-> Total size (End - Start): 32768
+-> Mapped file: /usr/lib/libvorbisfile.so.3.3.2
+-----------------------------
+VMA #161:
+-> Start address: 0x458fc000
+-> End address: 0x458fd000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libvorbisfile.so.3.3.2
+-----------------------------
+VMA #162:
+-> Start address: 0x459e2000
+-> End address: 0x45a1c000
+-> Total size (End - Start): 237568
+-> Mapped file: /usr/lib/libcroco-0.6.so.3.0.1
+-----------------------------
+VMA #163:
+-> Start address: 0x45a1c000
+-> End address: 0x45a1f000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libcroco-0.6.so.3.0.1
+-----------------------------
+VMA #164:
+-> Start address: 0x45a21000
+-> End address: 0x45a58000
+-> Total size (End - Start): 225280
+-> Mapped file: /usr/lib/librsvg-2.so.2.26.0
+-----------------------------
+VMA #165:
+-> Start address: 0x45a58000
+-> End address: 0x45a59000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/librsvg-2.so.2.26.0
+-----------------------------
+VMA #166:
+-> Start address: 0x45b31000
+-> End address: 0x45b6d000
+-> Total size (End - Start): 245760
+-> Mapped file: /usr/lib/libgsf-1.so.114.0.15
+-----------------------------
+VMA #167:
+-> Start address: 0x45b6d000
+-> End address: 0x45b70000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libgsf-1.so.114.0.15
+-----------------------------
+VMA #168:
+-> Start address: 0x45b70000
+-> End address: 0x45b71000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #169:
+-> Start address: 0xb24a5000
+-> End address: 0xb2505000
+-> Total size (End - Start): 393216
+-> Mapped file: /SYSV00000000 (deleted)
+-----------------------------
+VMA #170:
+-> Start address: 0xb2505000
+-> End address: 0xb251d000
+-> Total size (End - Start): 98304
+-> Mapped file: /usr/share/mime/mime.cache
+-----------------------------
+VMA #171:
+-> Start address: 0xb251d000
+-> End address: 0xb2530000
+-> Total size (End - Start): 77824
+-> Mapped file: /usr/lib/gio/modules/libgioremote-volume-monitor.so
+-----------------------------
+VMA #172:
+-> Start address: 0xb2530000
+-> End address: 0xb2531000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gio/modules/libgioremote-volume-monitor.so
+-----------------------------
+VMA #173:
+-> Start address: 0xb2531000
+-> End address: 0xb2546000
+-> Total size (End - Start): 86016
+-> Mapped file: /usr/lib/libgvfscommon.so.0.0.0
+-----------------------------
+VMA #174:
+-> Start address: 0xb2546000
+-> End address: 0xb2547000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libgvfscommon.so.0.0.0
+-----------------------------
+VMA #175:
+-> Start address: 0xb2556000
+-> End address: 0xb257f000
+-> Total size (End - Start): 167936
+-> Mapped file: /usr/lib/gio/modules/libgvfsdbus.so
+-----------------------------
+VMA #176:
+-> Start address: 0xb257f000
+-> End address: 0xb2580000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gio/modules/libgvfsdbus.so
+-----------------------------
+VMA #177:
+-> Start address: 0xb2583000
+-> End address: 0xb2985000
+-> Total size (End - Start): 4202496
+-> Mapped file: /usr/share/icons/hicolor/icon-theme.cache
+-----------------------------
+VMA #178:
+-> Start address: 0xb2985000
+-> End address: 0xb3012000
+-> Total size (End - Start): 6868992
+-> Mapped file: /usr/share/icons/gnome/icon-theme.cache
+-----------------------------
+VMA #179:
+-> Start address: 0xb3012000
+-> End address: 0xb34a3000
+-> Total size (End - Start): 4788224
+-> Mapped file: /usr/share/icons/Mist/icon-theme.cache
+-----------------------------
+VMA #180:
+-> Start address: 0xb34a3000
+-> End address: 0xb34fe000
+-> Total size (End - Start): 372736
+-> Mapped file: /usr/share/icons/System/icon-theme.cache
+-----------------------------
+VMA #181:
+-> Start address: 0xb34fe000
+-> End address: 0xb3505000
+-> Total size (End - Start): 28672
+-> Mapped file: /usr/lib/gconv/gconv-modules.cache
+-----------------------------
+VMA #182:
+-> Start address: 0xb3505000
+-> End address: 0xb7506000
+-> Total size (End - Start): 67112960
+-> Mapped file: /dev/shm/pulse-shm-3496438065
+-----------------------------
+VMA #183:
+-> Start address: 0xb7506000
+-> End address: 0xb759e000
+-> Total size (End - Start): 622592
+-> Mapped file: /usr/share/fonts/dejavu/DejaVuSans.ttf
+-----------------------------
+VMA #184:
+-> Start address: 0xb759e000
+-> End address: 0xb75a1000
+-> Total size (End - Start): 12288
+-> Mapped file: /var/cache/fontconfig/87f5e051180a7a75f16eb6fe7dbd3749-le32d4.cache-3
+-----------------------------
+VMA #185:
+-> Start address: 0xb75a1000
+-> End address: 0xb75a7000
+-> Total size (End - Start): 24576
+-> Mapped file: /var/cache/fontconfig/b79f3aaa7d385a141ab53ec885cc22a8-le32d4.cache-3
+-----------------------------
+VMA #186:
+-> Start address: 0xb75a7000
+-> End address: 0xb75a9000
+-> Total size (End - Start): 8192
+-> Mapped file: /var/cache/fontconfig/0b1bcc92b4d25cc154d77dafe3bceaa0-le32d4.cache-3
+-----------------------------
+VMA #187:
+-> Start address: 0xb75a9000
+-> End address: 0xb75ab000
+-> Total size (End - Start): 8192
+-> Mapped file: /var/cache/fontconfig/2e1514a9fdd499050989183bb65136db-le32d4.cache-3
+-----------------------------
+VMA #188:
+-> Start address: 0xb75ab000
+-> End address: 0xb75ad000
+-> Total size (End - Start): 8192
+-> Mapped file: /var/cache/fontconfig/5c755b2f27115486aa6359c84dd3cbda-le32d4.cache-3
+-----------------------------
+VMA #189:
+-> Start address: 0xb75ad000
+-> End address: 0xb75ae000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/b966c23d19cce9e9a98d55765cf2a0c7-le32d4.cache-3
+-----------------------------
+VMA #190:
+-> Start address: 0xb75ae000
+-> End address: 0xb75af000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/3f821257dd33660ba7bbb45c32deb84c-le32d4.cache-3
+-----------------------------
+VMA #191:
+-> Start address: 0xb75af000
+-> End address: 0xb75b1000
+-> Total size (End - Start): 8192
+-> Mapped file: /var/cache/fontconfig/830f035fa84a65ce80e050178dbb630d-le32d4.cache-3
+-----------------------------
+VMA #192:
+-> Start address: 0xb75b1000
+-> End address: 0xb75b2000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/81a173283b451552b599cfaafd6236bd-le32d4.cache-3
+-----------------------------
+VMA #193:
+-> Start address: 0xb75b2000
+-> End address: 0xb75b3000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/ac68f755438cc3dc5a526084839fc7ca-le32d4.cache-3
+-----------------------------
+VMA #194:
+-> Start address: 0xb75b3000
+-> End address: 0xb75b4000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/6cfc7d49b27ba7d3eb71ab86e04def2c-le32d4.cache-3
+-----------------------------
+VMA #195:
+-> Start address: 0xb75b4000
+-> End address: 0xb75b5000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/6fcb01a03a016cc71057b587cdea6709-le32d4.cache-3
+-----------------------------
+VMA #196:
+-> Start address: 0xb75b5000
+-> End address: 0xb75b6000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/46d51d90fe9d963f6f4186edb936a931-le32d4.cache-3
+-----------------------------
+VMA #197:
+-> Start address: 0xb75b6000
+-> End address: 0xb75b7000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/b887eea8f1b96e1d899b44ed6681fc27-le32d4.cache-3
+-----------------------------
+VMA #198:
+-> Start address: 0xb75b7000
+-> End address: 0xb75b8000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/860639f272b8b4b3094f9e399e41bccd-le32d4.cache-3
+-----------------------------
+VMA #199:
+-> Start address: 0xb75b8000
+-> End address: 0xb75b9000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/211368abcb0ff835c229ff05c9ec01dc-le32d4.cache-3
+-----------------------------
+VMA #200:
+-> Start address: 0xb75b9000
+-> End address: 0xb75ba000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/c46020d7221988a13df853d2b46304fc-le32d4.cache-3
+-----------------------------
+VMA #201:
+-> Start address: 0xb75ba000
+-> End address: 0xb75bb000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/df893b4576ad6107f9397134092c4059-le32d4.cache-3
+-----------------------------
+VMA #202:
+-> Start address: 0xb75bb000
+-> End address: 0xb75bc000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/900402270e15d763a6e008bb2d4c7686-le32d4.cache-3
+-----------------------------
+VMA #203:
+-> Start address: 0xb75bc000
+-> End address: 0xb75bd000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/47f48679023f44a4d1e44699a69464f6-le32d4.cache-3
+-----------------------------
+VMA #204:
+-> Start address: 0xb75bd000
+-> End address: 0xb75be000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/2881ed3fd21ca306ddad6f9b0dd3189f-le32d4.cache-3
+-----------------------------
+VMA #205:
+-> Start address: 0xb75be000
+-> End address: 0xb75bf000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/3c3fb04d32a5211b073874b125d29701-le32d4.cache-3
+-----------------------------
+VMA #206:
+-> Start address: 0xb75bf000
+-> End address: 0xb75c0000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/e61abf8156cc476151baa07d67337cae-le32d4.cache-3
+-----------------------------
+VMA #207:
+-> Start address: 0xb75c0000
+-> End address: 0xb75c3000
+-> Total size (End - Start): 12288
+-> Mapped file: /var/cache/fontconfig/b67b32625a2bb51b023d3814a918f351-le32d4.cache-3
+-----------------------------
+VMA #208:
+-> Start address: 0xb75c3000
+-> End address: 0xb75c4000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/991510d2da7f7b2bf8468002aae90060-le32d4.cache-3
+-----------------------------
+VMA #209:
+-> Start address: 0xb75c4000
+-> End address: 0xb75c5000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/d3379abda271c4acd2ad0c01f565d0b0-le32d4.cache-3
+-----------------------------
+VMA #210:
+-> Start address: 0xb75c5000
+-> End address: 0xb75c6000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/b4d0b56f766d89640448751fcd18ec1e-le32d4.cache-3
+-----------------------------
+VMA #211:
+-> Start address: 0xb75c6000
+-> End address: 0xb75cd000
+-> Total size (End - Start): 28672
+-> Mapped file: /var/cache/fontconfig/12b26b760a24f8b4feb03ad48a333a72-le32d4.cache-3
+-----------------------------
+VMA #212:
+-> Start address: 0xb75cd000
+-> End address: 0xb75d3000
+-> Total size (End - Start): 24576
+-> Mapped file: /var/cache/fontconfig/928306c3ad40271d946e41014a49fc28-le32d4.cache-3
+-----------------------------
+VMA #213:
+-> Start address: 0xb75d3000
+-> End address: 0xb75fe000
+-> Total size (End - Start): 176128
+-> Mapped file: /usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
+-----------------------------
+VMA #214:
+-> Start address: 0xb75fe000
+-> End address: 0xb75ff000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
+-----------------------------
+VMA #215:
+-> Start address: 0xb75ff000
+-> End address: 0xb760b000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #216:
+-> Start address: 0xb760b000
+-> End address: 0xb760c000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #217:
+-> Start address: 0xb760c000
+-> End address: 0xb760d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #218:
+-> Start address: 0xb760d000
+-> End address: 0xb780d000
+-> Total size (End - Start): 2097152
+-> Mapped file: /usr/lib/locale/locale-archive
+-----------------------------
+VMA #219:
+-> Start address: 0xb780d000
+-> End address: 0xb781e000
+-> Total size (End - Start): 69632
+-----------------------------
+VMA #220:
+-> Start address: 0xb781f000
+-> End address: 0xb7820000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/2.10.0/loaders/svg_loader.so
+-----------------------------
+VMA #221:
+-> Start address: 0xb7820000
+-> End address: 0xb7821000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/2.10.0/loaders/svg_loader.so
+-----------------------------
+VMA #222:
+-> Start address: 0xb7821000
+-> End address: 0xb7822000
+-> Total size (End - Start): 4096
+-> Mapped file: /var/cache/fontconfig/1248881498ac025e45c3042f6afe9284-le32d4.cache-3
+-----------------------------
+VMA #223:
+-> Start address: 0xb7822000
+-> End address: 0xb7825000
+-> Total size (End - Start): 12288
+-> Mapped file: /var/cache/fontconfig/beeeeb3dfe132a8a0633a017c99ce0c0-le32d4.cache-3
+-----------------------------
+VMA #224:
+-> Start address: 0xb7825000
+-> End address: 0xb7829000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+-----------------------------
+VMA #225:
+-> Start address: 0xb7829000
+-> End address: 0xb782a000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+-----------------------------
+VMA #226:
+-> Start address: 0xb782a000
+-> End address: 0xb782c000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/gtk-2.0/modules/libpk-gtk-module.so
+-----------------------------
+VMA #227:
+-> Start address: 0xb782c000
+-> End address: 0xb782d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/modules/libpk-gtk-module.so
+-----------------------------
+VMA #228:
+-> Start address: 0xb782d000
+-> End address: 0xb782e000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #229:
+-> Start address: 0xb782e000
+-> End address: 0xb782f000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #230:
+-> Start address: 0xbfc0d000
+-> End address: 0xbfc2a000
+-> Total size (End - Start): 118784
+
+Total VMA space size (all VMAs): 110305280
+Process 2686(fprintd) has RLIMIT_CORE set to 0
+Aborting core
+
+There are 46 virtual memory areas (VMAs).
+-----------------------------
+VMA #1:
+-> Start address: 0x8047000
+-> End address: 0x80a0000
+-> Total size (End - Start): 364544
+-> Mapped file: /usr/sbin/hald
+-----------------------------
+VMA #2:
+-> Start address: 0x80a0000
+-> End address: 0x80a2000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/sbin/hald
+-----------------------------
+VMA #3:
+-> Start address: 0x80a2000
+-> End address: 0x80aa000
+-> Total size (End - Start): 32768
+-----------------------------
+VMA #4:
+-> Start address: 0x87ac000
+-> End address: 0x8830000
+-> Total size (End - Start): 540672
+-----------------------------
+VMA #5:
+-> Start address: 0x43c62000
+-> End address: 0x43c81000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #6:
+-> Start address: 0x43c81000
+-> End address: 0x43c82000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #7:
+-> Start address: 0x43c82000
+-> End address: 0x43c83000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #8:
+-> Start address: 0x43c85000
+-> End address: 0x43e16000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #9:
+-> Start address: 0x43e16000
+-> End address: 0x43e18000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #10:
+-> Start address: 0x43e18000
+-> End address: 0x43e19000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #11:
+-> Start address: 0x43e19000
+-> End address: 0x43e1c000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #12:
+-> Start address: 0x43e25000
+-> End address: 0x43e3c000
+-> Total size (End - Start): 94208
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #13:
+-> Start address: 0x43e3c000
+-> End address: 0x43e3d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #14:
+-> Start address: 0x43e3d000
+-> End address: 0x43e3e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #15:
+-> Start address: 0x43e3e000
+-> End address: 0x43e40000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #16:
+-> Start address: 0x43e42000
+-> End address: 0x43e49000
+-> Total size (End - Start): 28672
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #17:
+-> Start address: 0x43e49000
+-> End address: 0x43e4a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #18:
+-> Start address: 0x43e4a000
+-> End address: 0x43e4b000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #19:
+-> Start address: 0x43e4d000
+-> End address: 0x43e75000
+-> Total size (End - Start): 163840
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #20:
+-> Start address: 0x43e75000
+-> End address: 0x43e76000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #21:
+-> Start address: 0x43e76000
+-> End address: 0x43e77000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #22:
+-> Start address: 0x43e79000
+-> End address: 0x43f61000
+-> Total size (End - Start): 950272
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #23:
+-> Start address: 0x43f61000
+-> End address: 0x43f62000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #24:
+-> Start address: 0x43f9b000
+-> End address: 0x43fe0000
+-> Total size (End - Start): 282624
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #25:
+-> Start address: 0x43fe0000
+-> End address: 0x43fe1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #26:
+-> Start address: 0x43fe1000
+-> End address: 0x43fe2000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #27:
+-> Start address: 0x44000000
+-> End address: 0x44043000
+-> Total size (End - Start): 274432
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #28:
+-> Start address: 0x44043000
+-> End address: 0x44044000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #29:
+-> Start address: 0x44278000
+-> End address: 0x44299000
+-> Total size (End - Start): 135168
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #30:
+-> Start address: 0x44299000
+-> End address: 0x4429a000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #31:
+-> Start address: 0xb754b000
+-> End address: 0xb754f000
+-> Total size (End - Start): 16384
+-----------------------------
+VMA #32:
+-> Start address: 0xb7554000
+-> End address: 0xb7558000
+-> Total size (End - Start): 16384
+-----------------------------
+VMA #33:
+-> Start address: 0xb758a000
+-> End address: 0xb758d000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #34:
+-> Start address: 0xb7596000
+-> End address: 0xb759d000
+-> Total size (End - Start): 28672
+-> Mapped file: /usr/lib/gconv/gconv-modules.cache
+-----------------------------
+VMA #35:
+-> Start address: 0xb759d000
+-> End address: 0xb76a0000
+-> Total size (End - Start): 1060864
+-> Mapped file: /var/cache/hald/fdi-cache
+-----------------------------
+VMA #36:
+-> Start address: 0xb76a0000
+-> End address: 0xb7710000
+-> Total size (End - Start): 458752
+-> Mapped file: /usr/share/hwdata/usb.ids
+-----------------------------
+VMA #37:
+-> Start address: 0xb7710000
+-> End address: 0xb77c1000
+-> Total size (End - Start): 724992
+-> Mapped file: /usr/share/hwdata/pci.ids
+-----------------------------
+VMA #38:
+-> Start address: 0xb77c1000
+-> End address: 0xb77cd000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #39:
+-> Start address: 0xb77cd000
+-> End address: 0xb77ce000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #40:
+-> Start address: 0xb77ce000
+-> End address: 0xb77cf000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #41:
+-> Start address: 0xb77d3000
+-> End address: 0xb77d5000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #42:
+-> Start address: 0xb77d6000
+-> End address: 0xb77d9000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #43:
+-> Start address: 0xb77de000
+-> End address: 0xb77e2000
+-> Total size (End - Start): 16384
+-----------------------------
+VMA #44:
+-> Start address: 0xb77e6000
+-> End address: 0xb77f1000
+-> Total size (End - Start): 45056
+-----------------------------
+VMA #45:
+-> Start address: 0xb77f1000
+-> End address: 0xb77f2000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #46:
+-> Start address: 0xbfcfb000
+-> End address: 0xbfd10000
+-> Total size (End - Start): 86016
+
+Total VMA space size (all VMAs): 7278592
+
+There are 40 virtual memory areas (VMAs).
+-----------------------------
+VMA #1:
+-> Start address: 0xb73f0000
+-> End address: 0xb73fc000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #2:
+-> Start address: 0xb73fc000
+-> End address: 0xb73fd000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #3:
+-> Start address: 0xb73fd000
+-> End address: 0xb73fe000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #4:
+-> Start address: 0xb740d000
+-> End address: 0xb760d000
+-> Total size (End - Start): 2097152
+-> Mapped file: /usr/lib/locale/locale-archive
+-----------------------------
+VMA #5:
+-> Start address: 0xb760d000
+-> End address: 0xb760f000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #6:
+-> Start address: 0xb760f000
+-> End address: 0xb7658000
+-> Total size (End - Start): 299008
+-> Mapped file: /lib/libfreebl3.so
+-----------------------------
+VMA #7:
+-> Start address: 0xb7658000
+-> End address: 0xb7659000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libfreebl3.so
+-----------------------------
+VMA #8:
+-> Start address: 0xb7659000
+-> End address: 0xb765a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libfreebl3.so
+-----------------------------
+VMA #9:
+-> Start address: 0xb765a000
+-> End address: 0xb765e000
+-> Total size (End - Start): 16384
+-----------------------------
+VMA #10:
+-> Start address: 0xb765e000
+-> End address: 0xb7665000
+-> Total size (End - Start): 28672
+-> Mapped file: /lib/libcrypt-2.12.so
+-----------------------------
+VMA #11:
+-> Start address: 0xb7665000
+-> End address: 0xb7666000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libcrypt-2.12.so
+-----------------------------
+VMA #12:
+-> Start address: 0xb7666000
+-> End address: 0xb7667000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libcrypt-2.12.so
+-----------------------------
+VMA #13:
+-> Start address: 0xb7667000
+-> End address: 0xb768e000
+-> Total size (End - Start): 159744
+-----------------------------
+VMA #14:
+-> Start address: 0xb768e000
+-> End address: 0xb781f000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #15:
+-> Start address: 0xb781f000
+-> End address: 0xb7821000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #16:
+-> Start address: 0xb7821000
+-> End address: 0xb7822000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #17:
+-> Start address: 0xb7822000
+-> End address: 0xb7826000
+-> Total size (End - Start): 16384
+-----------------------------
+VMA #18:
+-> Start address: 0xb7826000
+-> End address: 0xb783c000
+-> Total size (End - Start): 90112
+-> Mapped file: /lib/libaudit.so.1.0.0
+-----------------------------
+VMA #19:
+-> Start address: 0xb783c000
+-> End address: 0xb783d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libaudit.so.1.0.0
+-----------------------------
+VMA #20:
+-> Start address: 0xb783d000
+-> End address: 0xb783e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libaudit.so.1.0.0
+-----------------------------
+VMA #21:
+-> Start address: 0xb783e000
+-> End address: 0xb7841000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #22:
+-> Start address: 0xb7841000
+-> End address: 0xb7842000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #23:
+-> Start address: 0xb7842000
+-> End address: 0xb7843000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #24:
+-> Start address: 0xb7843000
+-> End address: 0xb784f000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libpam.so.0.82.2
+-----------------------------
+VMA #25:
+-> Start address: 0xb784f000
+-> End address: 0xb7850000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpam.so.0.82.2
+-----------------------------
+VMA #26:
+-> Start address: 0xb7850000
+-> End address: 0xb7851000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpam.so.0.82.2
+-----------------------------
+VMA #27:
+-> Start address: 0xb7851000
+-> End address: 0xb786e000
+-> Total size (End - Start): 118784
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #28:
+-> Start address: 0xb786e000
+-> End address: 0xb786f000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #29:
+-> Start address: 0xb786f000
+-> End address: 0xb7870000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #30:
+-> Start address: 0xb787f000
+-> End address: 0xb7880000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #31:
+-> Start address: 0xb7880000
+-> End address: 0xb7881000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #32:
+-> Start address: 0xb7881000
+-> End address: 0xb78a0000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #33:
+-> Start address: 0xb78a0000
+-> End address: 0xb78a1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #34:
+-> Start address: 0xb78a1000
+-> End address: 0xb78a2000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #35:
+-> Start address: 0xb78a2000
+-> End address: 0xb78b0000
+-> Total size (End - Start): 57344
+-> Mapped file: /usr/sbin/crond
+-----------------------------
+VMA #36:
+-> Start address: 0xb78b0000
+-> End address: 0xb78b1000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/sbin/crond
+-----------------------------
+VMA #37:
+-> Start address: 0xb78b1000
+-> End address: 0xb78b2000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/sbin/crond
+-----------------------------
+VMA #38:
+-> Start address: 0xb78b2000
+-> End address: 0xb7932000
+-> Total size (End - Start): 524288
+-----------------------------
+VMA #39:
+-> Start address: 0xb9360000
+-> End address: 0xb9381000
+-> Total size (End - Start): 135168
+-----------------------------
+VMA #40:
+-> Start address: 0xbfd76000
+-> End address: 0xbfdf8000
+-> Total size (End - Start): 532480
+
+Total VMA space size (all VMAs): 6057984
+
+There are 30 virtual memory areas (VMAs).
+-----------------------------
+VMA #1:
+-> Start address: 0x8048000
+-> End address: 0x804c000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/libexec/hald-runner
+-----------------------------
+VMA #2:
+-> Start address: 0x804c000
+-> End address: 0x804d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/libexec/hald-runner
+-----------------------------
+VMA #3:
+-> Start address: 0x8493000
+-> End address: 0x84b4000
+-> Total size (End - Start): 135168
+-----------------------------
+VMA #4:
+-> Start address: 0x43c62000
+-> End address: 0x43c81000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #5:
+-> Start address: 0x43c81000
+-> End address: 0x43c82000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #6:
+-> Start address: 0x43c82000
+-> End address: 0x43c83000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #7:
+-> Start address: 0x43c85000
+-> End address: 0x43e16000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #8:
+-> Start address: 0x43e16000
+-> End address: 0x43e18000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #9:
+-> Start address: 0x43e18000
+-> End address: 0x43e19000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #10:
+-> Start address: 0x43e19000
+-> End address: 0x43e1c000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #11:
+-> Start address: 0x43e25000
+-> End address: 0x43e3c000
+-> Total size (End - Start): 94208
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #12:
+-> Start address: 0x43e3c000
+-> End address: 0x43e3d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #13:
+-> Start address: 0x43e3d000
+-> End address: 0x43e3e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #14:
+-> Start address: 0x43e3e000
+-> End address: 0x43e40000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #15:
+-> Start address: 0x43e42000
+-> End address: 0x43e49000
+-> Total size (End - Start): 28672
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #16:
+-> Start address: 0x43e49000
+-> End address: 0x43e4a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #17:
+-> Start address: 0x43e4a000
+-> End address: 0x43e4b000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #18:
+-> Start address: 0x43e79000
+-> End address: 0x43f61000
+-> Total size (End - Start): 950272
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #19:
+-> Start address: 0x43f61000
+-> End address: 0x43f62000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #20:
+-> Start address: 0x43f9b000
+-> End address: 0x43fe0000
+-> Total size (End - Start): 282624
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #21:
+-> Start address: 0x43fe0000
+-> End address: 0x43fe1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #22:
+-> Start address: 0x43fe1000
+-> End address: 0x43fe2000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #23:
+-> Start address: 0x44000000
+-> End address: 0x44043000
+-> Total size (End - Start): 274432
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #24:
+-> Start address: 0x44043000
+-> End address: 0x44044000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #25:
+-> Start address: 0x44278000
+-> End address: 0x44299000
+-> Total size (End - Start): 135168
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #26:
+-> Start address: 0x44299000
+-> End address: 0x4429a000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #27:
+-> Start address: 0xb78bb000
+-> End address: 0xb78be000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #28:
+-> Start address: 0xb78cc000
+-> End address: 0xb78ce000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #29:
+-> Start address: 0xb78ce000
+-> End address: 0xb78cf000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #30:
+-> Start address: 0xbfa69000
+-> End address: 0xbfa7e000
+-> Total size (End - Start): 86016
+
+Total VMA space size (all VMAs): 3878912
+
+There are 154 virtual memory areas (VMAs).
+-----------------------------
+VMA #1:
+-> Start address: 0x8048000
+-> End address: 0x805e000
+-> Total size (End - Start): 90112
+-> Mapped file: /usr/bin/bluetooth-applet
+-----------------------------
+VMA #2:
+-> Start address: 0x805e000
+-> End address: 0x8061000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/bin/bluetooth-applet
+-----------------------------
+VMA #3:
+-> Start address: 0x93af000
+-> End address: 0x94b7000
+-> Total size (End - Start): 1081344
+-----------------------------
+VMA #4:
+-> Start address: 0x43c62000
+-> End address: 0x43c81000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #5:
+-> Start address: 0x43c81000
+-> End address: 0x43c82000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #6:
+-> Start address: 0x43c82000
+-> End address: 0x43c83000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #7:
+-> Start address: 0x43c85000
+-> End address: 0x43e16000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #8:
+-> Start address: 0x43e16000
+-> End address: 0x43e18000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #9:
+-> Start address: 0x43e18000
+-> End address: 0x43e19000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #10:
+-> Start address: 0x43e19000
+-> End address: 0x43e1c000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #11:
+-> Start address: 0x43e1e000
+-> End address: 0x43e21000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #12:
+-> Start address: 0x43e21000
+-> End address: 0x43e22000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #13:
+-> Start address: 0x43e22000
+-> End address: 0x43e23000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #14:
+-> Start address: 0x43e25000
+-> End address: 0x43e3c000
+-> Total size (End - Start): 94208
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #15:
+-> Start address: 0x43e3c000
+-> End address: 0x43e3d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #16:
+-> Start address: 0x43e3d000
+-> End address: 0x43e3e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #17:
+-> Start address: 0x43e3e000
+-> End address: 0x43e40000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #18:
+-> Start address: 0x43e42000
+-> End address: 0x43e49000
+-> Total size (End - Start): 28672
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #19:
+-> Start address: 0x43e49000
+-> End address: 0x43e4a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #20:
+-> Start address: 0x43e4a000
+-> End address: 0x43e4b000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/librt-2.12.so
+-----------------------------
+VMA #21:
+-> Start address: 0x43e4d000
+-> End address: 0x43e75000
+-> Total size (End - Start): 163840
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #22:
+-> Start address: 0x43e75000
+-> End address: 0x43e76000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #23:
+-> Start address: 0x43e76000
+-> End address: 0x43e77000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libm-2.12.so
+-----------------------------
+VMA #24:
+-> Start address: 0x43e79000
+-> End address: 0x43f61000
+-> Total size (End - Start): 950272
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #25:
+-> Start address: 0x43f61000
+-> End address: 0x43f62000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libglib-2.0.so.0.2200.5
+-----------------------------
+VMA #26:
+-> Start address: 0x43f64000
+-> End address: 0x43f76000
+-> Total size (End - Start): 73728
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #27:
+-> Start address: 0x43f76000
+-> End address: 0x43f77000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #28:
+-> Start address: 0x43f77000
+-> End address: 0x43f78000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #29:
+-> Start address: 0x43f7a000
+-> End address: 0x43f97000
+-> Total size (End - Start): 118784
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #30:
+-> Start address: 0x43f97000
+-> End address: 0x43f98000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #31:
+-> Start address: 0x43f98000
+-> End address: 0x43f99000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #32:
+-> Start address: 0x43f9b000
+-> End address: 0x43fe0000
+-> Total size (End - Start): 282624
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #33:
+-> Start address: 0x43fe0000
+-> End address: 0x43fe1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #34:
+-> Start address: 0x43fe1000
+-> End address: 0x43fe2000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdbus-1.so.3.4.0
+-----------------------------
+VMA #35:
+-> Start address: 0x43fe4000
+-> End address: 0x43ff9000
+-> Total size (End - Start): 86016
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #36:
+-> Start address: 0x43ff9000
+-> End address: 0x43ffb000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #37:
+-> Start address: 0x43ffb000
+-> End address: 0x43ffc000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #38:
+-> Start address: 0x43ffc000
+-> End address: 0x43ffe000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #39:
+-> Start address: 0x44000000
+-> End address: 0x44043000
+-> Total size (End - Start): 274432
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #40:
+-> Start address: 0x44043000
+-> End address: 0x44044000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgobject-2.0.so.0.2200.5
+-----------------------------
+VMA #41:
+-> Start address: 0x44046000
+-> End address: 0x44049000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libgmodule-2.0.so.0.2200.5
+-----------------------------
+VMA #42:
+-> Start address: 0x44049000
+-> End address: 0x4404a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgmodule-2.0.so.0.2200.5
+-----------------------------
+VMA #43:
+-> Start address: 0x4404c000
+-> End address: 0x440fb000
+-> Total size (End - Start): 716800
+-> Mapped file: /lib/libgio-2.0.so.0.2200.5
+-----------------------------
+VMA #44:
+-> Start address: 0x440fb000
+-> End address: 0x440fd000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libgio-2.0.so.0.2200.5
+-----------------------------
+VMA #45:
+-> Start address: 0x440ff000
+-> End address: 0x44103000
+-> Total size (End - Start): 16384
+-> Mapped file: /lib/libgthread-2.0.so.0.2200.5
+-----------------------------
+VMA #46:
+-> Start address: 0x44103000
+-> End address: 0x44104000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgthread-2.0.so.0.2200.5
+-----------------------------
+VMA #47:
+-> Start address: 0x44106000
+-> End address: 0x44123000
+-> Total size (End - Start): 118784
+-> Mapped file: /usr/lib/libxcb.so.1.1.0
+-----------------------------
+VMA #48:
+-> Start address: 0x44123000
+-> End address: 0x44124000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libxcb.so.1.1.0
+-----------------------------
+VMA #49:
+-> Start address: 0x44126000
+-> End address: 0x4425a000
+-> Total size (End - Start): 1261568
+-> Mapped file: /usr/lib/libX11.so.6.3.0
+-----------------------------
+VMA #50:
+-> Start address: 0x4425a000
+-> End address: 0x4425e000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libX11.so.6.3.0
+-----------------------------
+VMA #51:
+-> Start address: 0x44260000
+-> End address: 0x44262000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXau.so.6.0.0
+-----------------------------
+VMA #52:
+-> Start address: 0x44262000
+-> End address: 0x44263000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXau.so.6.0.0
+-----------------------------
+VMA #53:
+-> Start address: 0x44265000
+-> End address: 0x44275000
+-> Total size (End - Start): 65536
+-> Mapped file: /usr/lib/libXext.so.6.4.0
+-----------------------------
+VMA #54:
+-> Start address: 0x44275000
+-> End address: 0x44276000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXext.so.6.4.0
+-----------------------------
+VMA #55:
+-> Start address: 0x44278000
+-> End address: 0x44299000
+-> Total size (End - Start): 135168
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #56:
+-> Start address: 0x44299000
+-> End address: 0x4429a000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libdbus-glib-1.so.2.1.0
+-----------------------------
+VMA #57:
+-> Start address: 0x4429c000
+-> End address: 0x442c2000
+-> Total size (End - Start): 155648
+-> Mapped file: /lib/libexpat.so.1.5.2
+-----------------------------
+VMA #58:
+-> Start address: 0x442c2000
+-> End address: 0x442c4000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libexpat.so.1.5.2
+-----------------------------
+VMA #59:
+-> Start address: 0x442c6000
+-> End address: 0x442ed000
+-> Total size (End - Start): 159744
+-> Mapped file: /usr/lib/libpng12.so.0.46.0
+-----------------------------
+VMA #60:
+-> Start address: 0x442ed000
+-> End address: 0x442ee000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpng12.so.0.46.0
+-----------------------------
+VMA #61:
+-> Start address: 0x442f0000
+-> End address: 0x44384000
+-> Total size (End - Start): 606208
+-> Mapped file: /usr/lib/libfreetype.so.6.3.22
+-----------------------------
+VMA #62:
+-> Start address: 0x44384000
+-> End address: 0x44388000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libfreetype.so.6.3.22
+-----------------------------
+VMA #63:
+-> Start address: 0x4438a000
+-> End address: 0x44398000
+-> Total size (End - Start): 57344
+-> Mapped file: /usr/lib/libXi.so.6.1.0
+-----------------------------
+VMA #64:
+-> Start address: 0x44398000
+-> End address: 0x44399000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXi.so.6.1.0
+-----------------------------
+VMA #65:
+-> Start address: 0x4439b000
+-> End address: 0x443a3000
+-> Total size (End - Start): 32768
+-> Mapped file: /usr/lib/libXrender.so.1.3.0
+-----------------------------
+VMA #66:
+-> Start address: 0x443a3000
+-> End address: 0x443a4000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXrender.so.1.3.0
+-----------------------------
+VMA #67:
+-> Start address: 0x443a6000
+-> End address: 0x443d9000
+-> Total size (End - Start): 208896
+-> Mapped file: /usr/lib/libfontconfig.so.1.4.4
+-----------------------------
+VMA #68:
+-> Start address: 0x443d9000
+-> End address: 0x443db000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libfontconfig.so.1.4.4
+-----------------------------
+VMA #69:
+-> Start address: 0x443dd000
+-> End address: 0x44424000
+-> Total size (End - Start): 290816
+-> Mapped file: /usr/lib/libpango-1.0.so.0.2800.1
+-----------------------------
+VMA #70:
+-> Start address: 0x44424000
+-> End address: 0x44426000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libpango-1.0.so.0.2800.1
+-----------------------------
+VMA #71:
+-> Start address: 0x44428000
+-> End address: 0x4442a000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXdamage.so.1.1.0
+-----------------------------
+VMA #72:
+-> Start address: 0x4442a000
+-> End address: 0x4442b000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXdamage.so.1.1.0
+-----------------------------
+VMA #73:
+-> Start address: 0x4442d000
+-> End address: 0x4444b000
+-> Total size (End - Start): 122880
+-> Mapped file: /usr/lib/libgdk_pixbuf-2.0.so.0.1800.9
+-----------------------------
+VMA #74:
+-> Start address: 0x4444b000
+-> End address: 0x4444c000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libgdk_pixbuf-2.0.so.0.1800.9
+-----------------------------
+VMA #75:
+-> Start address: 0x4444e000
+-> End address: 0x44452000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libXfixes.so.3.1.0
+-----------------------------
+VMA #76:
+-> Start address: 0x44452000
+-> End address: 0x44453000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXfixes.so.3.1.0
+-----------------------------
+VMA #77:
+-> Start address: 0x44455000
+-> End address: 0x4445c000
+-> Total size (End - Start): 28672
+-> Mapped file: /usr/lib/libXrandr.so.2.2.0
+-----------------------------
+VMA #78:
+-> Start address: 0x4445c000
+-> End address: 0x4445d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXrandr.so.2.2.0
+-----------------------------
+VMA #79:
+-> Start address: 0x4445f000
+-> End address: 0x4446a000
+-> Total size (End - Start): 45056
+-> Mapped file: /usr/lib/libpangocairo-1.0.so.0.2800.1
+-----------------------------
+VMA #80:
+-> Start address: 0x4446a000
+-> End address: 0x4446b000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpangocairo-1.0.so.0.2800.1
+-----------------------------
+VMA #81:
+-> Start address: 0x4446d000
+-> End address: 0x4451f000
+-> Total size (End - Start): 729088
+-> Mapped file: /usr/lib/libgdk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #82:
+-> Start address: 0x4451f000
+-> End address: 0x44522000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libgdk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #83:
+-> Start address: 0x44524000
+-> End address: 0x4458a000
+-> Total size (End - Start): 417792
+-> Mapped file: /usr/lib/libpixman-1.so.0.18.4
+-----------------------------
+VMA #84:
+-> Start address: 0x4458a000
+-> End address: 0x4458d000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libpixman-1.so.0.18.4
+-----------------------------
+VMA #85:
+-> Start address: 0x4458f000
+-> End address: 0x44591000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXinerama.so.1.0.0
+-----------------------------
+VMA #86:
+-> Start address: 0x44591000
+-> End address: 0x44592000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXinerama.so.1.0.0
+-----------------------------
+VMA #87:
+-> Start address: 0x44594000
+-> End address: 0x44a1a000
+-> Total size (End - Start): 4743168
+-> Mapped file: /usr/lib/libgtk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #88:
+-> Start address: 0x44a1a000
+-> End address: 0x44a20000
+-> Total size (End - Start): 24576
+-> Mapped file: /usr/lib/libgtk-x11-2.0.so.0.1800.9
+-----------------------------
+VMA #89:
+-> Start address: 0x44a20000
+-> End address: 0x44a21000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #90:
+-> Start address: 0x44a23000
+-> End address: 0x44a25000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libXcomposite.so.1.0.0
+-----------------------------
+VMA #91:
+-> Start address: 0x44a25000
+-> End address: 0x44a26000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXcomposite.so.1.0.0
+-----------------------------
+VMA #92:
+-> Start address: 0x44a28000
+-> End address: 0x44a31000
+-> Total size (End - Start): 36864
+-> Mapped file: /usr/lib/libXcursor.so.1.0.2
+-----------------------------
+VMA #93:
+-> Start address: 0x44a31000
+-> End address: 0x44a32000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libXcursor.so.1.0.2
+-----------------------------
+VMA #94:
+-> Start address: 0x44a34000
+-> End address: 0x44a5d000
+-> Total size (End - Start): 167936
+-> Mapped file: /usr/lib/libpangoft2-1.0.so.0.2800.1
+-----------------------------
+VMA #95:
+-> Start address: 0x44a5d000
+-> End address: 0x44a5e000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libpangoft2-1.0.so.0.2800.1
+-----------------------------
+VMA #96:
+-> Start address: 0x44a60000
+-> End address: 0x44ade000
+-> Total size (End - Start): 516096
+-> Mapped file: /usr/lib/libcairo.so.2.10800.8
+-----------------------------
+VMA #97:
+-> Start address: 0x44ade000
+-> End address: 0x44ae0000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libcairo.so.2.10800.8
+-----------------------------
+VMA #98:
+-> Start address: 0x44ae2000
+-> End address: 0x44aff000
+-> Total size (End - Start): 118784
+-> Mapped file: /usr/lib/libatk-1.0.so.0.2809.1
+-----------------------------
+VMA #99:
+-> Start address: 0x44aff000
+-> End address: 0x44b01000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libatk-1.0.so.0.2809.1
+-----------------------------
+VMA #100:
+-> Start address: 0x44b03000
+-> End address: 0x44b15000
+-> Total size (End - Start): 73728
+-> Mapped file: /usr/lib/libgnome-bluetooth.so.7.0.2
+-----------------------------
+VMA #101:
+-> Start address: 0x44b15000
+-> End address: 0x44b16000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libgnome-bluetooth.so.7.0.2
+-----------------------------
+VMA #102:
+-> Start address: 0x44c4f000
+-> End address: 0x44ca2000
+-> Total size (End - Start): 339968
+-> Mapped file: /usr/lib/libORBit-2.so.0.1.0
+-----------------------------
+VMA #103:
+-> Start address: 0x44ca2000
+-> End address: 0x44cac000
+-> Total size (End - Start): 40960
+-> Mapped file: /usr/lib/libORBit-2.so.0.1.0
+-----------------------------
+VMA #104:
+-> Start address: 0x44cae000
+-> End address: 0x44ce5000
+-> Total size (End - Start): 225280
+-> Mapped file: /usr/lib/libgconf-2.so.4.1.5
+-----------------------------
+VMA #105:
+-> Start address: 0x44ce5000
+-> End address: 0x44ce8000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libgconf-2.so.4.1.5
+-----------------------------
+VMA #106:
+-> Start address: 0x44d1e000
+-> End address: 0x44d27000
+-> Total size (End - Start): 36864
+-> Mapped file: /usr/lib/libltdl.so.7.2.1
+-----------------------------
+VMA #107:
+-> Start address: 0x44d27000
+-> End address: 0x44d28000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libltdl.so.7.2.1
+-----------------------------
+VMA #108:
+-> Start address: 0x44d50000
+-> End address: 0x44d5b000
+-> Total size (End - Start): 45056
+-> Mapped file: /usr/lib/libunique-1.0.so.0.0.0
+-----------------------------
+VMA #109:
+-> Start address: 0x44d5b000
+-> End address: 0x44d5c000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libunique-1.0.so.0.0.0
+-----------------------------
+VMA #110:
+-> Start address: 0x44d5e000
+-> End address: 0x44d62000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/libcanberra-gtk.so.0.1.5
+-----------------------------
+VMA #111:
+-> Start address: 0x44d62000
+-> End address: 0x44d63000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libcanberra-gtk.so.0.1.5
+-----------------------------
+VMA #112:
+-> Start address: 0x44d65000
+-> End address: 0x44d74000
+-> Total size (End - Start): 61440
+-> Mapped file: /usr/lib/libcanberra.so.0.2.1
+-----------------------------
+VMA #113:
+-> Start address: 0x44d74000
+-> End address: 0x44d75000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libcanberra.so.0.2.1
+-----------------------------
+VMA #114:
+-> Start address: 0x450af000
+-> End address: 0x450be000
+-> Total size (End - Start): 61440
+-> Mapped file: /lib/libudev.so.0.5.1
+-----------------------------
+VMA #115:
+-> Start address: 0x450be000
+-> End address: 0x450bf000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libudev.so.0.5.1
+-----------------------------
+VMA #116:
+-> Start address: 0x450bf000
+-> End address: 0x450c0000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #117:
+-> Start address: 0x451d7000
+-> End address: 0x451d9000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #118:
+-> Start address: 0x451d9000
+-> End address: 0x451da000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #119:
+-> Start address: 0x451da000
+-> End address: 0x451db000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #120:
+-> Start address: 0x45512000
+-> End address: 0x4553c000
+-> Total size (End - Start): 172032
+-> Mapped file: /usr/lib/libvorbis.so.0.4.3
+-----------------------------
+VMA #121:
+-> Start address: 0x4553c000
+-> End address: 0x4553d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libvorbis.so.0.4.3
+-----------------------------
+VMA #122:
+-> Start address: 0x45557000
+-> End address: 0x4555c000
+-> Total size (End - Start): 20480
+-> Mapped file: /usr/lib/libogg.so.0.6.0
+-----------------------------
+VMA #123:
+-> Start address: 0x4555c000
+-> End address: 0x4555d000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libogg.so.0.6.0
+-----------------------------
+VMA #124:
+-> Start address: 0x45833000
+-> End address: 0x45842000
+-> Total size (End - Start): 61440
+-> Mapped file: /usr/lib/libtdb.so.1.2.1
+-----------------------------
+VMA #125:
+-> Start address: 0x45842000
+-> End address: 0x45843000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libtdb.so.1.2.1
+-----------------------------
+VMA #126:
+-> Start address: 0x4587a000
+-> End address: 0x45882000
+-> Total size (End - Start): 32768
+-> Mapped file: /usr/lib/libnotify.so.1.2.3
+-----------------------------
+VMA #127:
+-> Start address: 0x45882000
+-> End address: 0x45883000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libnotify.so.1.2.3
+-----------------------------
+VMA #128:
+-> Start address: 0x458f4000
+-> End address: 0x458fc000
+-> Total size (End - Start): 32768
+-> Mapped file: /usr/lib/libvorbisfile.so.3.3.2
+-----------------------------
+VMA #129:
+-> Start address: 0x458fc000
+-> End address: 0x458fd000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libvorbisfile.so.3.3.2
+-----------------------------
+VMA #130:
+-> Start address: 0xb665d000
+-> End address: 0xb6675000
+-> Total size (End - Start): 98304
+-> Mapped file: /usr/share/mime/mime.cache
+-----------------------------
+VMA #131:
+-> Start address: 0xb6675000
+-> End address: 0xb6688000
+-> Total size (End - Start): 77824
+-> Mapped file: /usr/lib/gio/modules/libgioremote-volume-monitor.so
+-----------------------------
+VMA #132:
+-> Start address: 0xb6688000
+-> End address: 0xb6689000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gio/modules/libgioremote-volume-monitor.so
+-----------------------------
+VMA #133:
+-> Start address: 0xb6689000
+-> End address: 0xb669e000
+-> Total size (End - Start): 86016
+-> Mapped file: /usr/lib/libgvfscommon.so.0.0.0
+-----------------------------
+VMA #134:
+-> Start address: 0xb669e000
+-> End address: 0xb669f000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libgvfscommon.so.0.0.0
+-----------------------------
+VMA #135:
+-> Start address: 0xb66ae000
+-> End address: 0xb66d7000
+-> Total size (End - Start): 167936
+-> Mapped file: /usr/lib/gio/modules/libgvfsdbus.so
+-----------------------------
+VMA #136:
+-> Start address: 0xb66d7000
+-> End address: 0xb66d8000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gio/modules/libgvfsdbus.so
+-----------------------------
+VMA #137:
+-> Start address: 0xb66d8000
+-> End address: 0xb6ada000
+-> Total size (End - Start): 4202496
+-> Mapped file: /usr/share/icons/hicolor/icon-theme.cache
+-----------------------------
+VMA #138:
+-> Start address: 0xb6ada000
+-> End address: 0xb7167000
+-> Total size (End - Start): 6868992
+-> Mapped file: /usr/share/icons/gnome/icon-theme.cache
+-----------------------------
+VMA #139:
+-> Start address: 0xb7167000
+-> End address: 0xb75f8000
+-> Total size (End - Start): 4788224
+-> Mapped file: /usr/share/icons/Mist/icon-theme.cache
+-----------------------------
+VMA #140:
+-> Start address: 0xb75f8000
+-> End address: 0xb7653000
+-> Total size (End - Start): 372736
+-> Mapped file: /usr/share/icons/System/icon-theme.cache
+-----------------------------
+VMA #141:
+-> Start address: 0xb7653000
+-> End address: 0xb767e000
+-> Total size (End - Start): 176128
+-> Mapped file: /usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
+-----------------------------
+VMA #142:
+-> Start address: 0xb767e000
+-> End address: 0xb767f000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
+-----------------------------
+VMA #143:
+-> Start address: 0xb767f000
+-> End address: 0xb768b000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #144:
+-> Start address: 0xb768b000
+-> End address: 0xb768c000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #145:
+-> Start address: 0xb768c000
+-> End address: 0xb768d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #146:
+-> Start address: 0xb768d000
+-> End address: 0xb788d000
+-> Total size (End - Start): 2097152
+-> Mapped file: /usr/lib/locale/locale-archive
+-----------------------------
+VMA #147:
+-> Start address: 0xb788d000
+-> End address: 0xb7898000
+-> Total size (End - Start): 45056
+-----------------------------
+VMA #148:
+-> Start address: 0xb789f000
+-> End address: 0xb78a3000
+-> Total size (End - Start): 16384
+-> Mapped file: /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+-----------------------------
+VMA #149:
+-> Start address: 0xb78a3000
+-> End address: 0xb78a4000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+-----------------------------
+VMA #150:
+-> Start address: 0xb78a4000
+-> End address: 0xb78a6000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/gtk-2.0/modules/libpk-gtk-module.so
+-----------------------------
+VMA #151:
+-> Start address: 0xb78a6000
+-> End address: 0xb78a7000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/gtk-2.0/modules/libpk-gtk-module.so
+-----------------------------
+VMA #152:
+-> Start address: 0xb78a7000
+-> End address: 0xb78a8000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #153:
+-> Start address: 0xb78a8000
+-> End address: 0xb78a9000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #154:
+-> Start address: 0xbfa1d000
+-> End address: 0xbfa32000
+-> Total size (End - Start): 86016
+
+Total VMA space size (all VMAs): 36667392
+
+There are 106 virtual memory areas (VMAs).
+-----------------------------
+VMA #1:
+-> Start address: 0xb7036000
+-> End address: 0xb7042000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #2:
+-> Start address: 0xb7042000
+-> End address: 0xb7043000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #3:
+-> Start address: 0xb7043000
+-> End address: 0xb7044000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #4:
+-> Start address: 0xb7044000
+-> End address: 0xb7047000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #5:
+-> Start address: 0xb7047000
+-> End address: 0xb7081000
+-> Total size (End - Start): 237568
+-> Mapped file: /lib/libnspr4.so
+-----------------------------
+VMA #6:
+-> Start address: 0xb7081000
+-> End address: 0xb7082000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnspr4.so
+-----------------------------
+VMA #7:
+-> Start address: 0xb7082000
+-> End address: 0xb7083000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnspr4.so
+-----------------------------
+VMA #8:
+-> Start address: 0xb7083000
+-> End address: 0xb7085000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #9:
+-> Start address: 0xb7085000
+-> End address: 0xb7088000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libplds4.so
+-----------------------------
+VMA #10:
+-> Start address: 0xb7088000
+-> End address: 0xb7089000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libplds4.so
+-----------------------------
+VMA #11:
+-> Start address: 0xb7089000
+-> End address: 0xb708a000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libplds4.so
+-----------------------------
+VMA #12:
+-> Start address: 0xb708a000
+-> End address: 0xb708e000
+-> Total size (End - Start): 16384
+-> Mapped file: /lib/libplc4.so
+-----------------------------
+VMA #13:
+-> Start address: 0xb708e000
+-> End address: 0xb708f000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libplc4.so
+-----------------------------
+VMA #14:
+-> Start address: 0xb708f000
+-> End address: 0xb7090000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libplc4.so
+-----------------------------
+VMA #15:
+-> Start address: 0xb7090000
+-> End address: 0xb70a7000
+-> Total size (End - Start): 94208
+-> Mapped file: /usr/lib/libnssutil3.so
+-----------------------------
+VMA #16:
+-> Start address: 0xb70a7000
+-> End address: 0xb70a8000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libnssutil3.so
+-----------------------------
+VMA #17:
+-> Start address: 0xb70a8000
+-> End address: 0xb70ab000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libnssutil3.so
+-----------------------------
+VMA #18:
+-> Start address: 0xb70ab000
+-> End address: 0xb70ac000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/lib/libnssutil3.so
+-----------------------------
+VMA #19:
+-> Start address: 0xb70ac000
+-> End address: 0xb70c3000
+-> Total size (End - Start): 94208
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #20:
+-> Start address: 0xb70c3000
+-> End address: 0xb70c4000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #21:
+-> Start address: 0xb70c4000
+-> End address: 0xb70c5000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpthread-2.12.so
+-----------------------------
+VMA #22:
+-> Start address: 0xb70c5000
+-> End address: 0xb70c8000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #23:
+-> Start address: 0xb70c8000
+-> End address: 0xb70ca000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libkeyutils.so.1.3
+-----------------------------
+VMA #24:
+-> Start address: 0xb70ca000
+-> End address: 0xb70cb000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libkeyutils.so.1.3
+-----------------------------
+VMA #25:
+-> Start address: 0xb70cb000
+-> End address: 0xb70cc000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libkeyutils.so.1.3
+-----------------------------
+VMA #26:
+-> Start address: 0xb70cc000
+-> End address: 0xb70d5000
+-> Total size (End - Start): 36864
+-> Mapped file: /lib/libkrb5support.so.0.1
+-----------------------------
+VMA #27:
+-> Start address: 0xb70d5000
+-> End address: 0xb70d6000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libkrb5support.so.0.1
+-----------------------------
+VMA #28:
+-> Start address: 0xb70d6000
+-> End address: 0xb70d7000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libkrb5support.so.0.1
+-----------------------------
+VMA #29:
+-> Start address: 0xb70d7000
+-> End address: 0xb7120000
+-> Total size (End - Start): 299008
+-> Mapped file: /lib/libfreebl3.so
+-----------------------------
+VMA #30:
+-> Start address: 0xb7120000
+-> End address: 0xb7121000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libfreebl3.so
+-----------------------------
+VMA #31:
+-> Start address: 0xb7121000
+-> End address: 0xb7122000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libfreebl3.so
+-----------------------------
+VMA #32:
+-> Start address: 0xb7122000
+-> End address: 0xb7126000
+-> Total size (End - Start): 16384
+-----------------------------
+VMA #33:
+-> Start address: 0xb7126000
+-> End address: 0xb72b7000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #34:
+-> Start address: 0xb72b7000
+-> End address: 0xb72b9000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #35:
+-> Start address: 0xb72b9000
+-> End address: 0xb72ba000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #36:
+-> Start address: 0xb72ba000
+-> End address: 0xb72bd000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #37:
+-> Start address: 0xb72bd000
+-> End address: 0xb73f1000
+-> Total size (End - Start): 1261568
+-> Mapped file: /usr/lib/libnss3.so
+-----------------------------
+VMA #38:
+-> Start address: 0xb73f1000
+-> End address: 0xb73f4000
+-> Total size (End - Start): 12288
+-> Mapped file: /usr/lib/libnss3.so
+-----------------------------
+VMA #39:
+-> Start address: 0xb73f4000
+-> End address: 0xb73f6000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/lib/libnss3.so
+-----------------------------
+VMA #40:
+-> Start address: 0xb73f6000
+-> End address: 0xb73f7000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #41:
+-> Start address: 0xb73f7000
+-> End address: 0xb73fa000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libcom_err.so.2.1
+-----------------------------
+VMA #42:
+-> Start address: 0xb73fa000
+-> End address: 0xb73fb000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libcom_err.so.2.1
+-----------------------------
+VMA #43:
+-> Start address: 0xb73fb000
+-> End address: 0xb73fc000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libcom_err.so.2.1
+-----------------------------
+VMA #44:
+-> Start address: 0xb73fc000
+-> End address: 0xb7425000
+-> Total size (End - Start): 167936
+-> Mapped file: /lib/libk5crypto.so.3.1
+-----------------------------
+VMA #45:
+-> Start address: 0xb7425000
+-> End address: 0xb7426000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libk5crypto.so.3.1
+-----------------------------
+VMA #46:
+-> Start address: 0xb7426000
+-> End address: 0xb7427000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libk5crypto.so.3.1
+-----------------------------
+VMA #47:
+-> Start address: 0xb7427000
+-> End address: 0xb7428000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libk5crypto.so.3.1
+-----------------------------
+VMA #48:
+-> Start address: 0xb7428000
+-> End address: 0xb74f7000
+-> Total size (End - Start): 847872
+-> Mapped file: /lib/libkrb5.so.3.3
+-----------------------------
+VMA #49:
+-> Start address: 0xb74f7000
+-> End address: 0xb74fd000
+-> Total size (End - Start): 24576
+-> Mapped file: /lib/libkrb5.so.3.3
+-----------------------------
+VMA #50:
+-> Start address: 0xb74fd000
+-> End address: 0xb74fe000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libkrb5.so.3.3
+-----------------------------
+VMA #51:
+-> Start address: 0xb74fe000
+-> End address: 0xb753a000
+-> Total size (End - Start): 245760
+-> Mapped file: /lib/libgssapi_krb5.so.2.2
+-----------------------------
+VMA #52:
+-> Start address: 0xb753a000
+-> End address: 0xb753b000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgssapi_krb5.so.2.2
+-----------------------------
+VMA #53:
+-> Start address: 0xb753b000
+-> End address: 0xb753c000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgssapi_krb5.so.2.2
+-----------------------------
+VMA #54:
+-> Start address: 0xb753c000
+-> End address: 0xb753d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libgssapi_krb5.so.2.2
+-----------------------------
+VMA #55:
+-> Start address: 0xb753d000
+-> End address: 0xb7544000
+-> Total size (End - Start): 28672
+-> Mapped file: /lib/libcrypt-2.12.so
+-----------------------------
+VMA #56:
+-> Start address: 0xb7544000
+-> End address: 0xb7545000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libcrypt-2.12.so
+-----------------------------
+VMA #57:
+-> Start address: 0xb7545000
+-> End address: 0xb7546000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libcrypt-2.12.so
+-----------------------------
+VMA #58:
+-> Start address: 0xb7546000
+-> End address: 0xb756d000
+-> Total size (End - Start): 159744
+-----------------------------
+VMA #59:
+-> Start address: 0xb756d000
+-> End address: 0xb7584000
+-> Total size (End - Start): 94208
+-> Mapped file: /lib/libnsl-2.12.so
+-----------------------------
+VMA #60:
+-> Start address: 0xb7584000
+-> End address: 0xb7585000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnsl-2.12.so
+-----------------------------
+VMA #61:
+-> Start address: 0xb7585000
+-> End address: 0xb7586000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnsl-2.12.so
+-----------------------------
+VMA #62:
+-> Start address: 0xb7586000
+-> End address: 0xb7589000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #63:
+-> Start address: 0xb7589000
+-> End address: 0xb759b000
+-> Total size (End - Start): 73728
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #64:
+-> Start address: 0xb759b000
+-> End address: 0xb759c000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #65:
+-> Start address: 0xb759c000
+-> End address: 0xb759d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libz.so.1.2.3
+-----------------------------
+VMA #66:
+-> Start address: 0xb759d000
+-> End address: 0xb759f000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #67:
+-> Start address: 0xb759f000
+-> End address: 0xb75a0000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #68:
+-> Start address: 0xb75a0000
+-> End address: 0xb75a1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libutil-2.12.so
+-----------------------------
+VMA #69:
+-> Start address: 0xb75a1000
+-> End address: 0xb7752000
+-> Total size (End - Start): 1773568
+-> Mapped file: /usr/lib/libcrypto.so.1.0.1e
+-----------------------------
+VMA #70:
+-> Start address: 0xb7752000
+-> End address: 0xb7762000
+-> Total size (End - Start): 65536
+-> Mapped file: /usr/lib/libcrypto.so.1.0.1e
+-----------------------------
+VMA #71:
+-> Start address: 0xb7762000
+-> End address: 0xb7769000
+-> Total size (End - Start): 28672
+-> Mapped file: /usr/lib/libcrypto.so.1.0.1e
+-----------------------------
+VMA #72:
+-> Start address: 0xb7769000
+-> End address: 0xb776c000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #73:
+-> Start address: 0xb776c000
+-> End address: 0xb7781000
+-> Total size (End - Start): 86016
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #74:
+-> Start address: 0xb7781000
+-> End address: 0xb7783000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #75:
+-> Start address: 0xb7783000
+-> End address: 0xb7784000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libresolv-2.12.so
+-----------------------------
+VMA #76:
+-> Start address: 0xb7784000
+-> End address: 0xb7786000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #77:
+-> Start address: 0xb7786000
+-> End address: 0xb77a3000
+-> Total size (End - Start): 118784
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #78:
+-> Start address: 0xb77a3000
+-> End address: 0xb77a4000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #79:
+-> Start address: 0xb77a4000
+-> End address: 0xb77a5000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #80:
+-> Start address: 0xb77a5000
+-> End address: 0xb77a8000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #81:
+-> Start address: 0xb77a8000
+-> End address: 0xb77a9000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #82:
+-> Start address: 0xb77a9000
+-> End address: 0xb77aa000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #83:
+-> Start address: 0xb77aa000
+-> End address: 0xb77ab000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #84:
+-> Start address: 0xb77ab000
+-> End address: 0xb77b7000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libpam.so.0.82.2
+-----------------------------
+VMA #85:
+-> Start address: 0xb77b7000
+-> End address: 0xb77b8000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpam.so.0.82.2
+-----------------------------
+VMA #86:
+-> Start address: 0xb77b8000
+-> End address: 0xb77b9000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libpam.so.0.82.2
+-----------------------------
+VMA #87:
+-> Start address: 0xb77b9000
+-> End address: 0xb77cf000
+-> Total size (End - Start): 90112
+-> Mapped file: /lib/libaudit.so.1.0.0
+-----------------------------
+VMA #88:
+-> Start address: 0xb77cf000
+-> End address: 0xb77d0000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libaudit.so.1.0.0
+-----------------------------
+VMA #89:
+-> Start address: 0xb77d0000
+-> End address: 0xb77d1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libaudit.so.1.0.0
+-----------------------------
+VMA #90:
+-> Start address: 0xb77d1000
+-> End address: 0xb77d9000
+-> Total size (End - Start): 32768
+-> Mapped file: /lib/libwrap.so.0.7.6
+-----------------------------
+VMA #91:
+-> Start address: 0xb77d9000
+-> End address: 0xb77da000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libwrap.so.0.7.6
+-----------------------------
+VMA #92:
+-> Start address: 0xb77da000
+-> End address: 0xb77db000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libwrap.so.0.7.6
+-----------------------------
+VMA #93:
+-> Start address: 0xb77db000
+-> End address: 0xb77dc000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libfipscheck.so.1.1.0
+-----------------------------
+VMA #94:
+-> Start address: 0xb77dc000
+-> End address: 0xb77dd000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libfipscheck.so.1.1.0
+-----------------------------
+VMA #95:
+-> Start address: 0xb77dd000
+-> End address: 0xb77de000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libfipscheck.so.1.1.0
+-----------------------------
+VMA #96:
+-> Start address: 0xb77ed000
+-> End address: 0xb77ee000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #97:
+-> Start address: 0xb77ee000
+-> End address: 0xb77ef000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #98:
+-> Start address: 0xb77ef000
+-> End address: 0xb780e000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #99:
+-> Start address: 0xb780e000
+-> End address: 0xb780f000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #100:
+-> Start address: 0xb780f000
+-> End address: 0xb7810000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #101:
+-> Start address: 0xb7810000
+-> End address: 0xb788e000
+-> Total size (End - Start): 516096
+-> Mapped file: /usr/sbin/sshd
+-----------------------------
+VMA #102:
+-> Start address: 0xb788e000
+-> End address: 0xb7890000
+-> Total size (End - Start): 8192
+-> Mapped file: /usr/sbin/sshd
+-----------------------------
+VMA #103:
+-> Start address: 0xb7890000
+-> End address: 0xb7891000
+-> Total size (End - Start): 4096
+-> Mapped file: /usr/sbin/sshd
+-----------------------------
+VMA #104:
+-> Start address: 0xb7891000
+-> End address: 0xb7896000
+-> Total size (End - Start): 20480
+-----------------------------
+VMA #105:
+-> Start address: 0xb881f000
+-> End address: 0xb8840000
+-> Total size (End - Start): 135168
+-----------------------------
+VMA #106:
+-> Start address: 0xbf8d8000
+-> End address: 0xbf8ed000
+-> Total size (End - Start): 86016
+
+Total VMA space size (all VMAs): 8941568
+BUG: unable to handle kernel NULL pointer dereference at 00000030
+IP: [<c05bcd41>] sys_proc_vma+0x31/0x1a0
+*pdpt = 0000000034b21001 *pde = 0000000000000000 
+Oops: 0000 [#2] SMP 
+last sysfs file: /sys/devices/pci0000:00/0000:00:15.0/0000:03:00.0/irq
+Modules linked in: bridge stp llc fuse autofs4 sunrpc ipt_REJECT nf_conntrack_ipv4 nf_defrag_ipv4 iptable_filter ip_tables ip6t_REJECT nf_conntrack_ipv6 xt_state nf_conntrack ip6table_filter ip6_tables ipv6 uinput microcode vmxnet3 sg i2c_piix4 i2c_core ext4 mbcache jbd2 sr_mod cdrom ahci sd_mod crc_t10dif mptspi mptscsih mptbase scsi_transport_spi pata_acpi ata_generic ata_piix dm_mirror dm_region_hash dm_log dm_mod [last unloaded: scsi_wait_scan]
+
+Pid: 2779, comm: test_syscall_pr Tainted: G      D    (2.6.32 #12) VMware Virtual Platform
+EIP: 0060:[<c05bcd41>] EFLAGS: 00010286 CPU: 3
+EIP is at sys_proc_vma+0x31/0x1a0
+EAX: 00000000 EBX: 00000002 ECX: f70914e4 EDX: c09a6140
+ESI: 080484a0 EDI: 08048390 EBP: f28b6000 ESP: f28b7f24
+ DS: 007b ES: 007b FS: 00d8 GS: 00e0 SS: 0068
+Process test_syscall_pr (pid: 2779, ti=f28b6000 task=c2236560 task.ti=f28b6000)
+Stack:
+ c04e5fe3 f45a00f0 0000014f 00000000 00000000 00000000 f32b43c0 00000000
+<0> c2033ac0 f451ecd4 00000002 00000000 00000000 00000000 00000000 f32b43c0
+<0> 00000001 c2443cf0 00000002 f451ecd4 f28b7fb4 43dd47c0 c2048800 c049f605
+Call Trace:
+ [<c04e5fe3>] ? handle_mm_fault+0x2b3/0xca0
+ [<c049f605>] ? audit_syscall_entry+0x205/0x230
+ [<c04094bb>] ? sysenter_do_call+0x12/0x28
+Code: 8b 84 24 90 00 00 00 89 5c 24 7c 89 b4 24 80 00 00 00 89 bc 24 84 00 00 00 89 ac 24 88 00 00 00 e8 35 c5 ea ff 8b 80 fc 01 00 00 <8b> 58 30 8b 30 c7 04 24 f8 36 90 c0 89 5c 24 04 e8 04 86 20 00 
+EIP: [<c05bcd41>] sys_proc_vma+0x31/0x1a0 SS:ESP 0068:f28b7f24
+CR2: 0000000000000030
+---[ end trace 6eb5c7e16ffc56ce ]---
+
+There are 25 virtual memory areas (VMAs).
+-----------------------------
+VMA #1:
+-> Start address: 0xb7693000
+-> End address: 0xb76c1000
+-> Total size (End - Start): 188416
+-----------------------------
+VMA #2:
+-> Start address: 0xb76c4000
+-> End address: 0xb76d0000
+-> Total size (End - Start): 49152
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #3:
+-> Start address: 0xb76d0000
+-> End address: 0xb76d1000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #4:
+-> Start address: 0xb76d1000
+-> End address: 0xb76d2000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libnss_files-2.12.so
+-----------------------------
+VMA #5:
+-> Start address: 0xb76e1000
+-> End address: 0xb76e3000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #6:
+-> Start address: 0xb76e3000
+-> End address: 0xb76e6000
+-> Total size (End - Start): 12288
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #7:
+-> Start address: 0xb76e6000
+-> End address: 0xb76e7000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #8:
+-> Start address: 0xb76e7000
+-> End address: 0xb76e8000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libdl-2.12.so
+-----------------------------
+VMA #9:
+-> Start address: 0xb76e8000
+-> End address: 0xb7879000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #10:
+-> Start address: 0xb7879000
+-> End address: 0xb787b000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #11:
+-> Start address: 0xb787b000
+-> End address: 0xb787c000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #12:
+-> Start address: 0xb787c000
+-> End address: 0xb787f000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #13:
+-> Start address: 0xb787f000
+-> End address: 0xb789c000
+-> Total size (End - Start): 118784
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #14:
+-> Start address: 0xb789c000
+-> End address: 0xb789d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #15:
+-> Start address: 0xb789d000
+-> End address: 0xb789e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #16:
+-> Start address: 0xb78ac000
+-> End address: 0xb78ae000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #17:
+-> Start address: 0xb78ae000
+-> End address: 0xb78af000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #18:
+-> Start address: 0xb78af000
+-> End address: 0xb78ce000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #19:
+-> Start address: 0xb78ce000
+-> End address: 0xb78cf000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #20:
+-> Start address: 0xb78cf000
+-> End address: 0xb78d0000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #21:
+-> Start address: 0xb78d0000
+-> End address: 0xb78f9000
+-> Total size (End - Start): 167936
+-> Mapped file: /sbin/udevd
+-----------------------------
+VMA #22:
+-> Start address: 0xb78f9000
+-> End address: 0xb78fa000
+-> Total size (End - Start): 4096
+-> Mapped file: /sbin/udevd
+-----------------------------
+VMA #23:
+-> Start address: 0xb78fa000
+-> End address: 0xb78fb000
+-> Total size (End - Start): 4096
+-> Mapped file: /sbin/udevd
+-----------------------------
+VMA #24:
+-> Start address: 0xb9348000
+-> End address: 0xb941c000
+-> Total size (End - Start): 868352
+-----------------------------
+VMA #25:
+-> Start address: 0xbfd83000
+-> End address: 0xbfd98000
+-> Total size (End - Start): 86016
+
+Total VMA space size (all VMAs): 3346432
+Process 2970(fprintd) has RLIMIT_CORE set to 0
+Aborting core
+Process 2975(fprintd) has RLIMIT_CORE set to 0
+Aborting core
+-> End address: 0xb7879000
+-> Total size (End - Start): 1642496
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #10:
+-> Start address: 0xb7879000
+-> End address: 0xb787b000
+-> Total size (End - Start): 8192
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #11:
+-> Start address: 0xb787b000
+-> End address: 0xb787c000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libc-2.12.so
+-----------------------------
+VMA #12:
+-> Start address: 0xb787c000
+-> End address: 0xb787f000
+-> Total size (End - Start): 12288
+-----------------------------
+VMA #13:
+-> Start address: 0xb787f000
+-> End address: 0xb789c000
+-> Total size (End - Start): 118784
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #14:
+-> Start address: 0xb789c000
+-> End address: 0xb789d000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #15:
+-> Start address: 0xb789d000
+-> End address: 0xb789e000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/libselinux.so.1
+-----------------------------
+VMA #16:
+-> Start address: 0xb78ac000
+-> End address: 0xb78ae000
+-> Total size (End - Start): 8192
+-----------------------------
+VMA #17:
+-> Start address: 0xb78ae000
+-> End address: 0xb78af000
+-> Total size (End - Start): 4096
+-----------------------------
+VMA #18:
+-> Start address: 0xb78af000
+-> End address: 0xb78ce000
+-> Total size (End - Start): 126976
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #19:
+-> Start address: 0xb78ce000
+-> End address: 0xb78cf000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #20:
+-> Start address: 0xb78cf000
+-> End address: 0xb78d0000
+-> Total size (End - Start): 4096
+-> Mapped file: /lib/ld-2.12.so
+-----------------------------
+VMA #21:
+-> Start address: 0xb78d0000
+-> End address: 0xb78f9000
+-> Total size (End - Start): 167936
+-> Mapped file: /sbin/udevd
+-----------------------------
+VMA #22:
+-> Start address: 0xb78f9000
+-> End address: 0xb78fa000
+-> Total size (End - Start): 4096
+-> Mapped file: /sbin/udevd
+-----------------------------
+VMA #23:
+-> Start address: 0xb78fa000
+-> End address: 0xb78fb000
+-> Total size (End - Start): 4096
+-> Mapped file: /sbin/udevd
+-----------------------------
+VMA #24:
+-> Start address: 0xb9348000
+-> End address: 0xb941c000
+-> Total size (End - Start): 868352
+-----------------------------
+VMA #25:
+-> Start address: 0xbfd83000
+-> End address: 0xbfd98000
+-> Total size (End - Start): 86016
+
+Total VMA space size (all VMAs): 3346432
+Process 2970(fprintd) has RLIMIT_CORE set to 0
+Aborting core
+Process 2975(fprintd) has RLIMIT_CORE set to 0
+Aborting core
